@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project 1</title>
+  <!-- Bootstrap -->
+  <!-- jQuery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="eventsHere"> events here </div>
+
+
+ <script>
+
+    // Performing our AJAX GET request
+    queryURL = "https://app.ticketmaster.com/discovery/v2/attractions.json?apikey=mTEygy6LqzguOiGcxe4nsIaFBEQTdwN3&keyword=metallica";
+
+    var response = [];
+    response.length = 0;
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        document.getElementById("eventsHere").innerHTML = "";
+
+        // Start a for loop to create giph diplay div's with onclick events to start and stop motion.
+        for (var i = 0; i < response._embedded.attractions.length; i++) {
+        var divInfo = `
+<h1>${response._embedded.attractions[i].name}</h1>;
+<img src="${response._embedded.attractions[i].images[0].url}" height ="50px;" alt="Cool picture dude!">;
+<button>${response._embedded.attractions[i].name}</button>;
+`
+      document.getElementById("eventsHere").innerHTML += divInfo;
+
+        }
+  });
+
+
+
+
+
+
+</script>
+</body >
+</html >
