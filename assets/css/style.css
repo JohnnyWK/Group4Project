@@ -1,0 +1,44 @@
+.example {
+    margin: auto;
+}
+
+.navText {
+    color: white !important;
+    font-family: 'Righteous', cursive;
+
+}
+
+#navbarNav {
+    float: right;
+}
+
+#splash-page{
+    text-align: center;
+}
+
+#taste-tree{
+    font-family: 'Righteous', cursive;
+    font-size: 75px;
+}
+
+#tag-line {
+    font-family: 'Satisfy', cursive;
+    margin-left: 130px;
+}
+
+#searchbar {
+    margin-left:95px;
+}
+
+#search {
+    text-align: center;
+    display: inline-block;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 35%;
+    margin-top: 20%
+}
