@@ -30,7 +30,12 @@ body {
 
 }
 
+.navLogo {
+    margin-left: 3%;
+}
+
 #navbarNav {
+    margin-right: 3%;
     float: right;
 }
 
