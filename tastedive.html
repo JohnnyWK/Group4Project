@@ -55,17 +55,28 @@
             url: queryURL,
             method: "GET"
             }).then(function(response) {
+                var resultDiv = $("#results")
                 var results = response.Similar.Results
                 // console.log(results);
                 console.log(search);
                 console.log(response);
-                $("#results").empty()
+                resultDiv.empty();
+                resultDiv.append("<br><h2 class='text-center'>Search Results</h2><br>");
+                resultDiv.append("Name: " + response.Similar.Info[0].Name + "<br>");
+                resultDiv.append("Type: " + response.Similar.Info[0].Type + "<br>");
+                resultDiv.append("Info: " + "<p>" + response.Similar.Info[0].wTeaser + "</p>" + "<br>");
+                resultDiv.append("<iframe width='560' height='315' src='https://www.youtube.com/embed/" + response.Similar.Info[0].yID
+                + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'allowfullscreen></iframe><br><hr><br>");
+                resultDiv.append("<h2 class='text-center'>Artists Related</h2><br>");
+                console.log();
+
+
 
                 for (var i = 0; i < results.length; i++) {
                     var infoDiv = $("<div>");
                     infoDiv.append("Name: " + results[i].Name + "<br>");
                     infoDiv.append("Type: " + results[i].Type + "<br><br>");
-                    $("#results").append(infoDiv);
+                    resultDiv.append(infoDiv);
                     // console.log(response);
                 }
 
