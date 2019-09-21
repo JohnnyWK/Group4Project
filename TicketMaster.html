@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project 1</title>
+  <!-- Bootstrap -->
+  <!-- jQuery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="eventsHere"> events here </div>
+
+
+ <script>
+    // Performing our AJAX GET request
+    queryURL = "https://app.ticketmaster.com/discovery/v2/attractions.json?apikey=mTEygy6LqzguOiGcxe4nsIaFBEQTdwN3&keyword=metallica";
+    queryURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=mTEygy6LqzguOiGcxe4nsIaFBEQTdwN3&keyword=metallica&preferredCountry=us&includeSpellcheck=yes"
+    var response = [];
+    response.length = 0;
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        document.getElementById("eventsHere").innerHTML = "";
+        // Start a for loop to create giph diplay div's with onclick events to start and stop motion.
+        for (var i = 0; i < response._embedded.events.length; i++) {
+        var divInfo = `<h2 style="margin-bottom :0px">${response._embedded.events[i].name}</h2>
+        <div class="eventDiv" style="background-color: beige; color:blue;" >
+<span><img src="${response._embedded.events[i].images[1].url}" height ="50px;" alt="Cool picture dude!"></span>;
+<span style="vertical-align:top"> ${response._embedded.events[i].dates.start.localDate}</span><br>
+<span style="vertical-align:top"> ${response._embedded.events[i].info}</span><br>
+<span style="vertical-align:top">LOCATION: 
+${response._embedded.events[i]._embedded.venues[0].name},
+${response._embedded.events[i]._embedded.venues[0].city.name} 
+${response._embedded.events[i]._embedded.venues[0].state.name} 
+${response._embedded.events[i]._embedded.venues[0].country.name}  
+ </span><br>
+<a href="${response._embedded.events[i].url}">Buy Tickets</a> 
+          </div>
+`
+      document.getElementById("eventsHere").innerHTML += divInfo;
+//       <img src="${response._embedded.attractions[i].images[0].url}" height ="50px;" alt="Cool picture dude!">;
+// <button>${response._embedded.attractions[i].name}</button>;
+// upcomingEvents._total = ${response._embedded.attractions[i].upcomingEvents._total}
+// url = ${response._embedded.attractions[i].url}
+// info = ${response._embedded.info}
+// ${response._embedded.events[i]._embedded.venues[0].city}
+//  ${response._embedded.events[i].venues[0]._embedded.venues[0].state.name} 
+//  ${response._embedded.events[i].venues[0]._embedded.venues[0].country.name}
+        }
+  });
+</script>
+</body >
+</html >
