@@ -50,11 +50,6 @@ body {
 
 #tag-line {
     font-family: 'Satisfy', cursive;
-    margin-left: 130px;
-}
-
-#searchbar {
-    margin-left:95px;
 }
 
 #search {
@@ -66,15 +61,17 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 35%;
-    margin-top: 20%
-    
+    margin-top: 20%;
+    text-align: center;
 }
 
 #results {
-    padding: 20%;
+    padding: 10%;
 }
 
+.card{
+    margin:30px;
+}
 .card-title {
     font-family: 'Righteous', cursive;
 }
