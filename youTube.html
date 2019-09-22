@@ -1,4 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    
+
+
+
+
+<script>    
+//function getYouTubeData(artistName) {
+    var youTube = [];
+    youTube.length = 0;
+
+    // Performing our AJAX GET request
+
+    // queryURL = "https://app.ticketMaster.com/discovery/v2/attractions.json?apikey=mTEygy6LqzguOiGcxe4nsIaFBEQTdwN3&keyword=metallica";
+    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&order=date&q=metalachi&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
+    var response = [];
+    response.length = 0;
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+    console.log(response);
+    for(var i=0; i<response.items.length;i++){
+
+        console.log(response.items[i].kind);
+
+if(response.items[i].id.videoId){console.log(response.items[i].id+ " url = https://www.youtube.com/watch?v="+response.items[i].id.videoId);}
+else{console.log("Not a Video.. "+response.items[i].id.kind);}
+        
+        
+
+    }
+//     for(var i=0; i<response.items.length;i++){
+//     items=response.items[i];
+//           youTube[i].youTubeVideoUrl=items[i].id.videoID;
+          
+// }
+
+
+
+
+console.log(youTube);
+//    https://www.youtube.com/watch?v=GaFpIG9yRTc
+    
+
+
+
+
+
+    
+        
+
+    });
+
+
+</script>
+    </body>
+    </html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 
 
 
@@ -41,4 +128,4 @@
   });
 </script>
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
-<button onclick="execute()">execute</button>
+<button onclick="execute()">execute</button> -->
