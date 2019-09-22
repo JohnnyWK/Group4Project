@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    
+
+
+
+
+<script>    
+//function getYouTubeData(artistName) {
+    var youTube = [];
+    youTube.length = 0;
+
+    // Performing our AJAX GET request
+
+    // queryURL = "https://app.ticketMaster.com/discovery/v2/attractions.json?apikey=mTEygy6LqzguOiGcxe4nsIaFBEQTdwN3&keyword=metallica";
+    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&order=date&q=metalachi&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
+    var response = [];
+    response.length = 0;
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+    console.log(response);
+    for(var i=0; i<response.items.length;i++){
+
+        console.log(response.items[i].kind);
+
+if(response.items[i].id.videoId){console.log(response.items[i].id+ " url = https://www.youtube.com/watch?v="+response.items[i].id.videoId);}
+else{console.log("Not a Video.. "+response.items[i].id.kind);}
+        
+        
+
+    }
+//     for(var i=0; i<response.items.length;i++){
+//     items=response.items[i];
+//           youTube[i].youTubeVideoUrl=items[i].id.videoID;
+          
+// }
+
+
+
+
+console.log(youTube);
+//    https://www.youtube.com/watch?v=GaFpIG9yRTc
+    
+
+
+
+
+
+    
+        
+
+    });
+
+
+</script>
+    </body>
+    </html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+<script src="https://apis.google.com/js/api.js"></script>
+<script>
+  /**
+   * Sample JavaScript code for youtube.search.list
+   * See instructions for running APIs Explorer code samples locally:
+   * https://developers.google.com/explorer-help/guides/code_samples#javascript
+   */
+
+  function authenticate() {
+    return gapi.auth2.getAuthInstance()
+        .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
+        .then(function() { console.log("Sign-in successful"); },
+              function(err) { console.error("Error signing in", err); });
+  }
+  function loadClient() {
+    gapi.client.setApiKey("AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY");
+    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
+  }
+  // Make sure the client is loaded and sign-in is complete before calling this method.
+  function execute() {
+    return gapi.client.youtube.search.list({
+      "order": "date",
+      "q": "metallachi"
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: "AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"});
+  });
+</script>
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button> -->
