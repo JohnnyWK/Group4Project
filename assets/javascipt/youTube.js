@@ -11,12 +11,12 @@
 
 function getYouTubeData(artistName) {
 
-console.log("artist name = "+artistName);
+    console.log("artist name = " + artistName);
 
     // Performing our AJAX GET request
     // https://www.googleapis.com/youtube/v3/search?part=snippet&q=no%20doubt&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY
     // queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=completed&type=video&maxResults=20&q=metalachi&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
-    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q="+artistName+"&videoEmbeddable=true&type=video&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
+    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + artistName + "&videoEmbeddable=true&type=video&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
     var response = [];
     var youTube = [];
     response.length = 0;
@@ -64,7 +64,7 @@ console.log("artist name = "+artistName);
                 if (event.snippet.publishedAt) {
                     youTube[i].date = event.snippet.publishedAt;
                     //offset time 
-                    tempDate = new Date( event.snippet.publishedAt.substr(0,10)+" 00:00:00 GMT -0600" );
+                    tempDate = new Date(event.snippet.publishedAt.substr(0, 10) + " 00:00:00 GMT -0600");
                     var tempDateString = tempDate.toString();
                     var tempDateFormatted = tempDateString.substr(0, 15);
                     youTube[i].dateFormatted = tempDateFormatted;
@@ -82,20 +82,20 @@ console.log("artist name = "+artistName);
         console.log(youTube);
 
 
-                    // insert into html page (remove this for final use..)
-                    document.getElementById("div2").innerHTML = "Related You Tube Videos";
-                    for (var e = 0; e < youTube.length; e++) {
-                            var divInfo = ` <h2 style="margin-bottom :0px">${youTube[e].title}</h2>
-                            <div class="eventDiv" style="background-color: beige; color:blue;" >
-                            <span><img src="${youTube[e].urlThumbnail}" height ="50px;" alt="Cool picture dude!"></span>;
-                            <span style="vertical-align:top"> ${youTube[e].date}</span><br>
-                            <span style="vertical-align:top"> ${youTube[e].dateFormatted}</span><br>
-                            <span style="vertical-align:top"> ${youTube[e].info}</span><br>
-                            <a href="${youTube[e].urlVideo}"> YouTube Video</a> 
-                            </div> `
-                    // stick this data into html test page:
-                    document.getElementById("div2").innerHTML += divInfo;
-                    };
+        // insert into html page (remove this for final use..)
+        document.getElementById("div2").innerHTML = "<div class='divTitle'>YouTube Videos Related to " + artistName + "</div>";
+        for (var e = 0; e < youTube.length; e++) {
+            var divInfo = ` <div class="eventDiv">
+<div class="articleTitle">${youTube[e].title}</div>
+<div class="articlePhoto"><img src="${youTube[e].urlThumbnail}" alt="Article Photo"></div>;
+<div class="articleShortText"> ${youTube[e].date}</div><br>
+<div class="articleShortText"> ${youTube[e].dateFormatted}</div><br>
+<div class="articleLongText"> ${youTube[e].info}</div><br>
+<a class="articleLink" href="${youTube[e].urlVideo}"> YouTube Video</a> 
+</div> `
+            // stick this data into html test page:
+            document.getElementById("div2").innerHTML += divInfo;
+        };
 
 
 
