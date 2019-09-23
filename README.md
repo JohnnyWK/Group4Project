@@ -1,7 +1,7 @@
 # Taste Tree
 
 TASTE TREE
-"Branch Out"gi
+"Branch Out"
 
 Created by Group 4 - Perry Williams, Daniel Chiu, Dayne Beronque, and Johnny Kreitzman.
 Front End Team - Dayne Beronque and Johnny Kreitzman
