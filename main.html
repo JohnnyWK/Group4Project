@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Group 4 Project!!</title>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
@@ -88,6 +89,7 @@
                     </div>
                 </div>
             </div>
+                                                            
             <div class="col-lg-4" id="div2">You Tube Videos:</div>
             <div class="col-lg-4" id="div3">Upcoming Peformances</div>
         </div>
@@ -95,19 +97,18 @@
     
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-  
+
 
     <script type="text/javascript">
 
         $("#submitbtn").on("click", function(){
-          
+
             
 
             var search = $("#user-input").val();
           
             getticketMasterData(search);
         getYouTubeData(search);
-
             var info = 1;
             var APIKey = "346441-Group4-QF40VRWM";
             var queryURL = "https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=" + search + "&info=" + info + "&k=" + APIKey;
@@ -161,6 +162,8 @@
 
             });
         })
+
+
     </script>
     <footer class="text-center" id="sticky-footer">2019 Group4</footer>
 </body>
