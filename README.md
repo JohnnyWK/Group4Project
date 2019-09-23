@@ -1,7 +1,7 @@
 # Taste Tree
 
 TASTE TREE
-"Branch Out"
+"Branch Out"gi
 
 Created by Group 4 - Perry Williams, Daniel Chiu, Dayne Beronque, and Johnny Kreitzman.
 Front End Team - Dayne Beronque and Johnny Kreitzman
@@ -19,4 +19,7 @@ API's Utilized:
 TasteDive API
 Ticketmaster API
 YouTube API
+
+
+ttps://johnnywk.github.io/Group4Project/
 
