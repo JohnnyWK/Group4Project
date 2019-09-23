@@ -10,6 +10,9 @@
 
 
 function getYouTubeData(artistName) {
+
+console.log("artist name = "+artistName);
+
     // Performing our AJAX GET request
     // https://www.googleapis.com/youtube/v3/search?part=snippet&q=no%20doubt&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY
     // queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=completed&type=video&maxResults=20&q=metalachi&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
@@ -111,5 +114,5 @@ function getYouTubeData(artistName) {
 //     var ItemToSearch = document.getElementById("searchArtist").value;
 //     // alert("ItemToSearch = "+ItemToSearch)
 
-    getYouTubeData(ItemToSearch);
-});
+//     getYouTubeData(ItemToSearch);
+// });

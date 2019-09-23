@@ -11,6 +11,7 @@
 
 
 function getticketMasterData(artistName) {
+    console.log("inside getticketmaster",artistName)
     var ticketMaster = [];
     ticketMaster.length = 0;
 
@@ -24,7 +25,7 @@ function getticketMasterData(artistName) {
         method: "GET"
     }).then(function (response) {
  if(response){console.log(response);}else{alert("No Response from ticketmaster..");}
-        document.getElementById("eventsHere").innerHTML = "";
+        document.getElementById("div3").innerHTML = "";
         // Start a for loop to create giph diplay div's with onclick events to start and stop motion.
         var ticketMaster = [];
 
