@@ -11,6 +11,7 @@
 
 
 function getticketMasterData(artistName) {
+    console.log("inside getticketmaster",artistName)
     var ticketMaster = [];
     ticketMaster.length = 0;
 
@@ -24,7 +25,7 @@ function getticketMasterData(artistName) {
         method: "GET"
     }).then(function (response) {
  if(response){console.log(response);}else{alert("No Response from ticketmaster..");}
-        document.getElementById("eventsHere").innerHTML = "";
+        document.getElementById("div3").innerHTML = "";
         // Start a for loop to create giph diplay div's with onclick events to start and stop motion.
         var ticketMaster = [];
 
@@ -117,7 +118,8 @@ function getticketMasterData(artistName) {
         )
 
         console.log(ticketMaster);
-
+        document.getElementById("div3").innerHTML ="Upcoming Related Shows<BR>";
+        
         for (var e = 0; e < ticketMaster.length; e++) {
             // insert into html page (remove this for final use..)
 
@@ -131,7 +133,7 @@ function getticketMasterData(artistName) {
            </div>
  `
 
-            document.getElementById("eventsHere").innerHTML += divInfo;
+            document.getElementById("div3").innerHTML += divInfo;
         }
 
 
@@ -140,14 +142,14 @@ function getticketMasterData(artistName) {
 }// end of function call
 
 
-// Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
-document.getElementById("button").addEventListener("click", function () {
-    var ItemToSearch = document.getElementById("searchArtist").value;
-    // alert("ItemToSearch = "+ItemToSearch)
+// // Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
+// document.getElementById("button").addEventListener("click", function () {
+//     var ItemToSearch = document.getElementById("searchArtist").value;
+//     // alert("ItemToSearch = "+ItemToSearch)
 
-    getticketMasterData(ItemToSearch);
-});
+//     // getticketMasterData(ItemToSearch);
+// });
 
 
 
-getticketMasterData("metalachi");
+// getticketMasterData("metalachi");

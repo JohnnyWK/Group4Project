@@ -10,9 +10,13 @@
 
 
 function getYouTubeData(artistName) {
+
+console.log("artist name = "+artistName);
+
     // Performing our AJAX GET request
+    // https://www.googleapis.com/youtube/v3/search?part=snippet&q=no%20doubt&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY
     // queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=completed&type=video&maxResults=20&q=metalachi&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
-    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=completed&type=video&maxResults=20&q="+artistName+"&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
+    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q="+artistName+"&videoEmbeddable=true&type=video&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
     var response = [];
     var youTube = [];
     response.length = 0;
@@ -79,7 +83,7 @@ function getYouTubeData(artistName) {
 
 
                     // insert into html page (remove this for final use..)
-                    document.getElementById("eventsHere").innerHTML = "";
+                    document.getElementById("div2").innerHTML = "Related You Tube Videos";
                     for (var e = 0; e < youTube.length; e++) {
                             var divInfo = ` <h2 style="margin-bottom :0px">${youTube[e].title}</h2>
                             <div class="eventDiv" style="background-color: beige; color:blue;" >
@@ -90,7 +94,7 @@ function getYouTubeData(artistName) {
                             <a href="${youTube[e].urlVideo}"> YouTube Video</a> 
                             </div> `
                     // stick this data into html test page:
-                    document.getElementById("eventsHere").innerHTML += divInfo;
+                    document.getElementById("div2").innerHTML += divInfo;
                     };
 
 
@@ -105,10 +109,10 @@ function getYouTubeData(artistName) {
 }// end of function call
 
 
-// Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
-document.getElementById("button").addEventListener("click", function () {
-    var ItemToSearch = document.getElementById("searchArtist").value;
-    // alert("ItemToSearch = "+ItemToSearch)
+// // Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
+// document.getElementById("button").addEventListener("click", function () {
+//     var ItemToSearch = document.getElementById("searchArtist").value;
+//     // alert("ItemToSearch = "+ItemToSearch)
 
-    getYouTubeData(ItemToSearch);
-});
+//     getYouTubeData(ItemToSearch);
+// });
