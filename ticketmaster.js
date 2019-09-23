@@ -52,7 +52,7 @@ function getticketMasterData(artistName) {
             if (event.dates || event.dates.start || event.dates.start.localDate) { ticketMaster[i].eventDate = event.dates.start.localDate; }
 
 
-            var tempDate = new Date(event.dates.start.localDate + "GMT -5");
+            var tempDate = new Date(event.dates.start.localDate + "GMT -0600");
             var tempDateString = tempDate.toString();
             var tempDateFormatted = tempDateString.substr(0, 15);
 
@@ -118,11 +118,6 @@ function getticketMasterData(artistName) {
 
         console.log(ticketMaster);
 
-
-
-
-
-
         for (var e = 0; e < ticketMaster.length; e++) {
             // insert into html page (remove this for final use..)
 
@@ -138,18 +133,6 @@ function getticketMasterData(artistName) {
 
             document.getElementById("eventsHere").innerHTML += divInfo;
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     });
