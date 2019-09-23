@@ -87,3 +87,7 @@ body {
     font-family: 'Rubik', sans-serif;
 
 }
+
+.card-img-top {
+    border-radius: 50%;
+}
