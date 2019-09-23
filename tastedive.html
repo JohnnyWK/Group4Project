@@ -40,6 +40,45 @@
     <input class="text-center" id="submitbtn" type="submit">
     </div>
     <div id="results"></div>
+    <div id="card" style="display: visible">
+        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+            <div class="card-header" id="card-header0">Header</div>
+            <div class="card-body">
+              <p class="card-text" id="card-text0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+            <div class="card-header" id="card-header1">Header</div>
+            <div class="card-body">
+              <p class="card-text" id="card-text1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+            <div class="card-header" id="card-header2">Header</div>
+            <div class="card-body">
+              <p class="card-text" id="card-text2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+            <div class="card-header" id="card-header3">Header</div>
+            <div class="card-body">
+              <p class="card-text" id="card-text3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+            <div class="card-header" id="card-header4">Header</div>
+            <div class="card-body">
+              <p class="card-text" id="card-text4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+            <div class="card-header" id="card-header5">Header</div>
+            <div class="card-body">
+              <p class="card-text" id="card-text5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/O4irXQhgMqg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -64,11 +103,18 @@
                 resultDiv.append("<br><h2 class='text-center'>Search Results</h2><br>");
                 resultDiv.append("Name: " + response.Similar.Info[0].Name + "<br>");
                 resultDiv.append("Type: " + response.Similar.Info[0].Type + "<br>");
-                resultDiv.append("Info: " + "<p>" + response.Similar.Info[0].wTeaser + "</p>" + "<br>");
-                resultDiv.append("<iframe width='560' height='315' src='https://www.youtube.com/embed/" + response.Similar.Info[0].yID
+                if (response.Similar.Info[0].wTeaser !== "") {
+                    resultDiv.append("Info: " + "<p>" + response.Similar.Info[0].wTeaser + "</p>" + "<br>");
+                }
+                // resultDiv.append("Info: " + "<p>" + response.Similar.Info[0].wTeaser + "</p>" + "<br>");
+                if (response.Similar.Info[0].yID !== null) {
+                    resultDiv.append("<iframe width='250' height='140' src='https://www.youtube.com/embed/" + response.Similar.Info[0].yID
                 + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'allowfullscreen></iframe><br><hr><br>");
+                }
+                // resultDiv.append("<iframe width='560' height='315' src='https://www.youtube.com/embed/" + response.Similar.Info[0].yID
+                // + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'allowfullscreen></iframe><br><hr><br>");
                 resultDiv.append("<h2 class='text-center'>Artists Related</h2><br>");
-                console.log();
+                console.log("https://www.youtube.com/watch?v=" + response.Similar.Info[0].yID);
 
 
 
@@ -78,7 +124,17 @@
                     infoDiv.append("Type: " + results[i].Type + "<br><br>");
                     resultDiv.append(infoDiv);
                     // console.log(response);
-                }
+                };
+                for (var i = 0; i < 6; i++) {
+                    var headerDiv = $("#card-header" + i);
+                    var cardP = $("#card-text" + i);
+                    var headerResultDiv = headerDiv;
+                    var cardResultDiv = cardP;
+                    headerDiv.text("Name: " + results[i].Name);
+                    cardP.html("Type: " + results[i].Type);
+                    cardP.append("<p>Info: " + results[i].wTeaser + "</p>");
+                    // console.log("Card: " + results[i]);
+                };
 
 
             });
