@@ -39,51 +39,64 @@
     <input id="user-input" type="text">
     <input class="text-center" id="submitbtn" type="submit">
     </div>
-    <div id="results"></div>
-    <div id="card" style="display: none">
-        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
-            <div class="card-header" id="card-header0">Header</div>
-            <div class="card-body">
-              <p class="card-text" id="card-text0" style="height: 200px">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div id="card" style="display: none">
+                    <div id="results"></div>
+                    <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                        <div class="card-header" id="card-header0">Header</div>
+                        <div class="card-body">
+                        <p class="card-text" id="card-text0"">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                        <div class="card-header" id="card-header1">Header</div>
+                        <div class="card-body">
+                        <p class="card-text" id="card-text1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                        <div class="card-header" id="card-header2">Header</div>
+                        <div class="card-body">
+                        <p class="card-text" id="card-text2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                        <div class="card-header" id="card-header3">Header</div>
+                        <div class="card-body">
+                        <p class="card-text" id="card-text3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                        <div class="card-header" id="card-header4">Header</div>
+                        <div class="card-body">
+                        <p class="card-text" id="card-text4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                        <div class="card-header" id="card-header5">Header</div>
+                        <div class="card-body">
+                        <p class="card-text" id="card-text5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
-            <div class="card-header" id="card-header1">Header</div>
-            <div class="card-body">
-              <p class="card-text" id="card-text1" style="height: 200px">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
-            <div class="card-header" id="card-header2">Header</div>
-            <div class="card-body">
-              <p class="card-text" id="card-text2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
-            <div class="card-header" id="card-header3">Header</div>
-            <div class="card-body">
-              <p class="card-text" id="card-text3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
-            <div class="card-header" id="card-header4">Header</div>
-            <div class="card-body">
-              <p class="card-text" id="card-text4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
-            <div class="card-header" id="card-header5">Header</div>
-            <div class="card-body">
-              <p class="card-text" id="card-text5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
+            <div class="col-lg-4" id="div2">Div 2</div>
+            <div class="col-lg-4" id="div3">Div 3</div>
         </div>
     </div>
+    
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/youTube.js"></script>
+    <script src="assets/javascript/tickMaster.js"></script>
+
     <script type="text/javascript">
 
         $("#submitbtn").on("click", function(){
+            
             var search = $("#user-input").val();
             var info = 1;
             var APIKey = "346441-Group4-QF40VRWM";
@@ -138,7 +151,7 @@
 
             });
         })
-
+        getYouTubeData(search);
     </script>
     <footer class="text-center" id="sticky-footer">2019 Group4</footer>
 </body>
