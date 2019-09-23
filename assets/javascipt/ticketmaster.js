@@ -117,7 +117,8 @@ function getticketMasterData(artistName) {
         )
 
         console.log(ticketMaster);
-
+        document.getElementById("div3").innerHTML ="";
+        
         for (var e = 0; e < ticketMaster.length; e++) {
             // insert into html page (remove this for final use..)
 
@@ -131,7 +132,7 @@ function getticketMasterData(artistName) {
            </div>
  `
 
-            document.getElementById("eventsHere").innerHTML += divInfo;
+            document.getElementById("div3").innerHTML += divInfo;
         }
 
 
@@ -140,14 +141,14 @@ function getticketMasterData(artistName) {
 }// end of function call
 
 
-// Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
-document.getElementById("button").addEventListener("click", function () {
-    var ItemToSearch = document.getElementById("searchArtist").value;
-    // alert("ItemToSearch = "+ItemToSearch)
+// // Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
+// document.getElementById("button").addEventListener("click", function () {
+//     var ItemToSearch = document.getElementById("searchArtist").value;
+//     // alert("ItemToSearch = "+ItemToSearch)
 
-    getticketMasterData(ItemToSearch);
-});
+//     // getticketMasterData(ItemToSearch);
+// });
 
 
 
-getticketMasterData("metalachi");
+// getticketMasterData("metalachi");

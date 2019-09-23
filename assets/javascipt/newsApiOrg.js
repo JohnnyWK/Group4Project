@@ -1,32 +1,36 @@
 // This js will return data array of upcoming events, consisting of:
 //example:
-// ticketMaster.name: "Metallachi"
-// ticketMaster.info: "2 drink minumum"
+// returnData.name: "Metallachi"
+// returnDat.info: "2 drink minumum"
 
 
 
 
 function getData(topic) {
-    var ticketMaster = [];
-    ticketMaster.length = 0;
+    var returnData = [];
+   returnData.length = 0;
 
-   
-    var url = 'https://newsapi.org/v2/everything?q=' + topic + '&sortBy=popularity&apiKey=5dcec5d762154df793285080fa58a3dc'
+ var url = 'https://newsapi.org/v2/everything?q=' + topic + '&sortBy=popularity&apiKey=5dcec5d762154df793285080fa58a3dc'
       //var url="https://newsapi.org/v2/top-headlines?country=us&apiKey=5dcec5d762154df793285080fa58a3dc"
 
-    fetch(url)
-        .then(function (response) {
-            var tempData = response.json();
-            tempData.then(function(response){
-                    console.log("response", response);
+fetch(url)
 
-                    console.log("response.articles = ", response.articles);
+    // fetch returns a "Promise" of data..
+.then(function (response) {
+      var tempData = response.json();
 
+// the following "then" will complete when the "Promise" is fulfilled.
+      tempData.then(function(data){
 
-
-            })
+        console.log("response", data);
+        //anything you need in here
+      
+    })
 
           
+
+
+
  
             //---------------------OR--------------------
             // $.ajax({
