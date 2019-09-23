@@ -83,7 +83,7 @@ console.log("artist name = "+artistName);
 
 
                     // insert into html page (remove this for final use..)
-                    document.getElementById("div2").innerHTML = "";
+                    document.getElementById("div2").innerHTML = "Related You Tube Videos";
                     for (var e = 0; e < youTube.length; e++) {
                             var divInfo = ` <h2 style="margin-bottom :0px">${youTube[e].title}</h2>
                             <div class="eventDiv" style="background-color: beige; color:blue;" >

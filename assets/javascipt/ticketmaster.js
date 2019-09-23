@@ -118,7 +118,7 @@ function getticketMasterData(artistName) {
         )
 
         console.log(ticketMaster);
-        document.getElementById("div3").innerHTML ="";
+        document.getElementById("div3").innerHTML ="Upcoming Related Shows<BR>";
         
         for (var e = 0; e < ticketMaster.length; e++) {
             // insert into html page (remove this for final use..)
