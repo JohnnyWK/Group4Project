@@ -37,7 +37,7 @@ function gettasteDiveData(search) {
         $("#card").attr("style", "display: visible");
 
         // remove any html from div1:
-        document.getElementById("div1").innerHTML=""; 
+        document.getElementById("div1").innerHTML="You May Also Like:<br>"; 
         for (var i = 0; i < 6; i++) {
             var headerDiv = $("#card-header" + i);
             var cardP = $("#card-text" + i);
