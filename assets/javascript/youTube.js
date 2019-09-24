@@ -84,7 +84,7 @@ function getYouTubeData(artistName) {
 
 
         // insert into html page (remove this for final use..)
-        document.getElementById("div2").innerHTML = "<div class='divTitle'>YouTube Videos Related to " + artistName + "</div>";
+        document.getElementById("div2").innerHTML = "<div class='divTitle'>YouTube Videos Related to: " + artistName + "</div>";
         for (var e = 0; e < youTube.length; e++) {
             var divInfo = ` <div class="eventDiv">
 <div class="articleTitle">${youTube[e].title}</div>

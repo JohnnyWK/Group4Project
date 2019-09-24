@@ -118,7 +118,7 @@ function getticketMasterData(artistName) {
         )
 
         console.log(ticketMaster);
-        document.getElementById("div3").innerHTML = "<div class='divTitle'>Upcoming Events Related to " + artistName + "</div>";
+        document.getElementById("div3").innerHTML = "<div class='divTitle'>Upcoming Events Related to: " + artistName + "</div>";
         for (var e = 0; e < ticketMaster.length; e++) {
             // insert into html page (remove this for final use..)
 
