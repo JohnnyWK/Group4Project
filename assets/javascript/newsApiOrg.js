@@ -92,9 +92,6 @@ document.getElementById("div4").innerHTML += divInfo;
 } // end of forloop to put articles onto page
 
 
-
-
-
 }) // end of "tempData.then(function(data){"
 }) // end of   "fetch(url).then(function (response) {"
 
@@ -103,6 +100,8 @@ document.getElementById("div4").innerHTML += divInfo;
 
 
 
+
+//  removed .. just used for testing::
 // //  Event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
 // document.getElementById("button").addEventListener("click", function () {
 //     var ItemToSearch = document.getElementById("searchArtist").value;
