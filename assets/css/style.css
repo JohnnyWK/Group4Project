@@ -10,24 +10,38 @@ body {
     /* opacity: .7; */
 }
 
-#div1, #div2, #div3 {
-    background-color: white;
+#div1, #div2, #div3, #div4 {
+    /* background-color: white; */
     margin-top: 10%;
     height: 500px;
     overflow: auto;
     margin-bottom: 15%;
+    background-color: white;
+    max-width:22%;
 }
 
-#div1 {
-    background-color: #747480
+ #div1 {
+     /* background-color: #747480; */
+     margin-top: 5%;
 }
 
 #div2 {
-    background-color: #4F4F57;
+    /* background-color: #4F4F57; */
+    margin-top: 17%;
+    margin-left: 3%;
 }
 
 #div3 {
-    background-color: #3A3A40;
+    /* background-color: #3A3A40; */
+    /* margin-left: 3%; */
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+#div4 {
+    /* margin-left: 5%; */
+    margin-top: 17%;
+    margin-left: 3%;
 }
 
 .example {
@@ -103,7 +117,10 @@ input[type=text] {
       display: flex;
   }
 
-
+.articleLongText {
+    overflow: scroll;
+    height: 100px;
+}
 
 
 
