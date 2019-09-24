@@ -3,11 +3,7 @@ body {
     min-height: 100%;
     height: 100%;
     flex-direction: column;
-    /* background-image: url(../images/space.gif);
-    background-repeat: no-repeat;
-    background-size: cover; */
     background-color: black;
-    /* opacity: .7; */
 }
 
 #div1, #div2, #div3, #div4 {
@@ -19,6 +15,7 @@ body {
     max-width:22%;
     color: white;
     border-style: solid;
+    border-radius: 10px;
 }
 
  #div1 {
@@ -50,9 +47,7 @@ body {
 }
 
 #navbar-id {
-    background-image: url(../images/space.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(assets/images/space.gif);
     height: 70px;
 }
 
@@ -130,7 +125,7 @@ input[type=text]:focus {
     font-family: Futura,Trebuchet MS,Arial,sans-serif;
     font-size:26px;
     color: white;
-    background: black;
+    background: transparent;
     text-align: center;
     font-weight: bolder;
     }
@@ -218,7 +213,6 @@ input[type=text]:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: black;
   }
   .glitch::before {
     left: 2px;
