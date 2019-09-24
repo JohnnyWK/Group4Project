@@ -112,6 +112,13 @@ input[type=text] {
     max-width: 200px;
 }
 
+.articleLongText {
+    max-height: 100px;
+    overflow: auto;
+    max-height: 100px;
+    overflow: auto;
+}
+
 
 #main-content {
       display: flex;
