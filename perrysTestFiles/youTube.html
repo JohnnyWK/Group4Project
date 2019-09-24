@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+Youtube sample results page:
+    <input type="text" id="searchArtist" placeholder="Enter Artist or Band Here!"></input>
+    <div style="background-color:red; color:white; font-size: 24px; width:50px" class="button" id="button"
+      value="searchButton">Go!</div>
+
+      
+
+
+    <div id="eventsHere"> events here </div>
+
+
+
+
+    
+    <script src="youTube.js"></script>
+
+
+
+
+
+
+<!-- 
+    <script>
+        //function getYouTubeData(artistName) {
+        var youTube = [];
+        youTube.length = 0;
+        // Performing our AJAX GET request
+        // queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=completed&type=video&maxResults=20&q=metalachi&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
+        queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=completed&type=video&maxResults=20&q=metalachi&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
+        var response = [];
+        response.length = 0;
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            for (var i = 0; i < response.items.length; i++) {
+                // console.log(response);
+                if (response.items[i].id.videoId) {
+                    // console.log(response.items[i].id+ " url = https://www.youtube.com/watch?v="+response.items[i].id.videoId);
+                    var event = response.items[i];
+                    youTube.title = event.snippet.title;
+                    youTube.urlVideo = "https://www.youtube.com/watch?v=" + event.id.videoId;
+                    youTube.urlThumbnail = event.snippet.thumbnails.default.url;
+                    youTube.info = event.snippet.description;
+                    youTube.date=  event.snippet.publishedAt.substr(0,9);   
+
+
+                }
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+            for (var i = 0; i < response.items.length; i++) {
+                items = response.items[i];
+                youTube[i].youTubeVideoUrl = items[i].id.videoID;
+
+            }
+
+
+
+
+            console.log(youTube);
+            //    https://www.youtube.com/watch?v=GaFpIG9yRTc
+
+
+
+
+
+
+
+
+
+        });
+
+
+    </script> -->
+
+
+</body>
+</html>
