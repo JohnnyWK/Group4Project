@@ -87,7 +87,7 @@ function getYouTubeData(artistName) {
         for (var e = 0; e < youTube.length; e++) {
             var divInfo = ` <div class="eventDiv">
 <div class="articleTitle">${youTube[e].title}</div>
-<div class="articlePhoto"><img src="${youTube[e].urlThumbnail}" alt="Article Photo"></div>;
+<div class="articlePhoto"><img src="${youTube[e].urlThumbnail}" alt="Article Photo"></div>
 <div class="articleShortText"> ${youTube[e].date}</div><br>
 <div class="articleShortText"> ${youTube[e].dateFormatted}</div><br>
 <div class="articleLongText"> ${youTube[e].info}</div><br>
