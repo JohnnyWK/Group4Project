@@ -11,7 +11,7 @@ body::before {
     height: 10px;
     box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
     z-index: 100;
-    background-image: url(../images/space.gif);
+    /* background-image: url(../images/space.gif); */
   }
 
 body {
@@ -22,7 +22,27 @@ body {
     background-image: url(../images/space.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .7;
+    background-color: #81807F;
+    /* opacity: .7; */
+}
+
+#div1, #div2, #div3 {
+    background-color: white;
+    margin-top: 10%;
+    height: 500px;
+    overflow: auto;
+}
+
+#div1 {
+    background-color: #E0FFE4;
+}
+
+#div2 {
+    background-color: #BBB4CC;
+}
+
+#div3 {
+    background-color: #A6A1B3;
 }
 
 .example {
@@ -30,22 +50,21 @@ body {
 }
 
 .navText {
+    opacity: .7; 
     color: white !important;
     font-family: 'Righteous', cursive;
 
 }
 
 .navLogo {
+    opacity: .7; 
     margin-left: 3%;
 }
 
 #navbarNav {
+    opacity: .7; 
     margin-right: 3%;
     float: right;
-}
-
-#splash-page{
-    text-align: center;
 }
 
 #taste-tree{
@@ -59,24 +78,28 @@ body {
     font-family: 'Satisfy', cursive;
 }
 
-#search {
-    text-align: center;
-    display: inline-block;
+#search-column {
+    margin-top: 15%;
 }
 
-.main-container {
+/* #search {
+    text-align: center;
+    display: inline-block;
+} */
+
+/* .main-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-top: 20%;
     text-align: center;
-}
+} */
 
-#results {
+/* #results {
     padding: 10%;
-}
+} */
 
-.card{
+/* .card{
     margin:30px;
 }
 .card-title {
@@ -90,4 +113,4 @@ body {
 
 .card-img-top {
     border-radius: 50%;
-}
+} */
