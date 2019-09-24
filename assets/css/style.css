@@ -15,8 +15,10 @@ body {
     height: 500px;
     overflow: auto;
     margin-bottom: 15%;
-    background-color: white;
+    background-color: transparent;
     max-width:22%;
+    color: white;
+    border-style: solid;
 }
 
  #div1 {
@@ -125,7 +127,7 @@ input[type=text]:focus {
 }
 
 .divTitle{
-    font-family: 'Fugaz One', cursive;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif;
     font-size:26px;
     color: white;
     background: black;
@@ -143,7 +145,7 @@ input[type=text]:focus {
 .articleTitle{
     font-family: 'Staatliches', cursive;
     font-size:22px;
-    color: black;
+    color: white;
     text-align: center;
     font-weight: bolder;
     
