@@ -124,7 +124,7 @@ function getticketMasterData(artistName) {
 
             var divInfo = ` <div class="eventDiv">
 <div class='articleTitle'>${ticketMaster[e].name}</div>
-<div><img class="articlePhoto" src="${ticketMaster[e].image}" height ="50px;" alt="Ticket Master Photo"></div>;
+<div><img class="articlePhoto" src="${ticketMaster[e].image}" height ="50px;" alt="Ticket Master Photo"></div>
 <div class="articleShortText" >  ${ticketMaster[e].eventDateFormatted}</div><br>
 <div class="articleLongText" >  ${ticketMaster[e].eventInfo}</div><br>
 <div class="articleShortText" > LOCATION: ${ticketMaster[e].eventVenue} Date= ${ticketMaster[e].eventDateFormatted}</div><br>
