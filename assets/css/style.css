@@ -15,18 +15,19 @@ body {
     margin-top: 10%;
     height: 500px;
     overflow: auto;
+    margin-bottom: 15%;
 }
 
 #div1 {
-    background-color: #E0FFE4;
+    background-color: #747480
 }
 
 #div2 {
-    background-color: #BBB4CC;
+    background-color: #4F4F57;
 }
 
 #div3 {
-    background-color: #A6A1B3;
+    background-color: #3A3A40;
 }
 
 .example {
@@ -58,10 +59,11 @@ body {
     float: right;
 }
 
-#taste-tree{
-    color: #40B84F;
+#title{
+    color: white;
     font-family: 'Righteous', cursive;
     font-size: 75px;
+    opacity: .8;
 }
 
 #tag-line {
@@ -72,6 +74,18 @@ body {
 #search-column {
     margin-top: 15%;
 }
+
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  
+  input[type=text]:focus {
+    width: 25%;
+  }
+
 
 /* #search {
     text-align: center;
