@@ -35,6 +35,7 @@
 </head>
 
 <body>
+
   <nav class="navbar sticky-top navbar-expand-xs navbar-expand-sm navbar-expand-lg navbar-light" id="navbar-id">
     <div class="d-flex flex-grow-1">
       <span class="d-block"></span>
@@ -88,6 +89,7 @@
         $("#submitbtn").on("click", function () {
 
 
+
           var search = $("#user-input").val();
           //run functions to fill the DIV's ***********************************************************************
           getticketMasterData(search);
@@ -105,6 +107,13 @@
 
           // });
         })
+
+            // Enter to submit function
+            $(document).bind('keypress', function(event) {
+                if(event.keyCode==13){
+                    $("#submitbtn").trigger('click');
+                }
+            });
 
 
       </script>
