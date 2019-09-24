@@ -21,5 +21,5 @@ Ticketmaster API
 YouTube API
 
 
-ttps://johnnywk.github.io/Group4Project/
+https://johnnywk.github.io/Group4Project/
 

@@ -1,0 +1,53 @@
+.navText {
+    color: white !important;
+    font-family: 'Righteous', cursive;
+
+}
+
+
+#splash-page{
+    text-align: center;
+}
+
+#taste-tree{
+    font-family: 'Righteous', cursive;
+    font-size: 75px;
+    margin-top: 10%;
+}
+
+#tag-line {
+    color: #B35973;
+    font-family: 'Satisfy', cursive;
+}
+
+
+#searchbar {
+    /* margin-left:95px; */
+}
+
+#search {
+    text-align: center;
+    display: inline-block;
+}
+
+.main-container {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* margin-left: 35%; */
+    margin: auto;
+    
+}
+
+#sticky-footer {
+    position: fixed;
+    bottom: 0;
+    background-color: grey;
+    width: 100%;
+    /* margin: auto; */
+}
+
+.articleLongText {
+    height: 200px;
+    overflow: auto;
+}

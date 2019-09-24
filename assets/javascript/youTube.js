@@ -15,9 +15,9 @@ function getYouTubeData(artistName) {
 
     // Performing our AJAX GET request
     // perrys api key:
-    // queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + artistName + "&videoEmbeddable=true&type=video&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
+    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + artistName + "&videoEmbeddable=true&type=video&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
     // daniels api key:
-    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + artistName + "&videoEmbeddable=true&type=video&key=AIzaSyCyZbwUI-oq91OAEz_ZT80p7api9cQqQsU"
+    // queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + artistName + "&videoEmbeddable=true&type=video&key=AIzaSyCyZbwUI-oq91OAEz_ZT80p7api9cQqQsU"
     var response = [];
     var youTube = [];
     response.length = 0;
@@ -88,17 +88,18 @@ function getYouTubeData(artistName) {
         for (var e = 0; e < youTube.length; e++) {
             var divInfo = ` <div class="eventDiv">
 <div class="articleTitle">${youTube[e].title}</div>
+<a class="articleLink" href="${youTube[e].urlVideo}"> 
 <div class="articlePhoto"><img src="${youTube[e].urlThumbnail}" alt="Article Photo"></div>
+</a> 
 <div class="articleShortText"> ${youTube[e].date}</div><br>
 <div class="articleShortText"> ${youTube[e].dateFormatted}</div><br>
 <div class="articleLongText"> ${youTube[e].info}</div><br>
-<a class="articleLink" href="${youTube[e].urlVideo}"> YouTube Video</a> 
 </div> `
             // stick this data into html test page:
             document.getElementById("div2").innerHTML += divInfo;
         };
 
-
+{/* <a class="articleLink" href="${youTube[e].urlVideo}"> YouTube Video</a>  */} // made the picture the link
 
     }
 

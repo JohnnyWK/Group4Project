@@ -175,13 +175,13 @@ fetch(url)
         }// end of function call
 
 
-//Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
- document.getElementById("button").addEventListener("click", function () {
-     var ItemToSearch = document.getElementById("searchArtist").value;
-    // alert("ItemToSearch = "+ItemToSearch)
+// //Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
+//  document.getElementById("button").addEventListener("click", function () {
+//      var ItemToSearch = document.getElementById("searchArtist").value;
+//     // alert("ItemToSearch = "+ItemToSearch)
 
-     getData(ItemToSearch);
- });
+//      getData(ItemToSearch);
+//  });
 
 
 // uncomment out the following line to open to Metallica
