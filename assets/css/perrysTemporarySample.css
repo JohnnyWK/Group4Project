@@ -1,0 +1,57 @@
+/* column headline div 	class="divTitle"
+div around each article class="eventDiv"
+article Title div       class = "articleTitle"
+article photo div       class ="articlePhoto"
+article short text div  class = "articleShortText"
+article long text div   class = "articleLongText"
+article link field div  class="articleLink"  */
+
+
+.divTitle{
+font-size:18px;
+color: white;
+background: black;
+text-align: center;
+font-weight: bolder;
+}
+.eventDiv{
+background-color: rgb(230, 250, 250);
+margin: 5px;
+border: 4px;
+border-style: double;
+padding: 3px; 
+}
+
+.articleTitle{
+font-size:18px;
+color: white;
+background: darkblue;
+text-align: center;
+font-weight: bolder;
+
+}
+.articlePhoto{
+height:100px;
+border-style: solid;
+border-width: 3px;
+border-color:white;
+margin:5px;
+box-shadow: 5px 5px 5px grey;
+}
+
+.articleShortText{
+text-align: center;
+font-weight: bold;
+font-size:18px;
+line-height: 120%;
+}
+.articleLongText{
+font-size:14px;
+/* line-height: 110%; */
+}
+
+
+.articleLink{
+font-weight: bolder;
+font-size: 17px;
+}    

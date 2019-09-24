@@ -11,7 +11,7 @@
 
 
 function getticketMasterData(artistName) {
-    console.log("inside getticketmaster",artistName)
+    console.log("inside getticketmaster", artistName)
     var ticketMaster = [];
     ticketMaster.length = 0;
 
@@ -24,7 +24,7 @@ function getticketMasterData(artistName) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
- if(response){console.log(response);}else{alert("No Response from ticketmaster..");}
+        if (response) { console.log(response); } else { alert("No Response from ticketmaster.."); }
         document.getElementById("div3").innerHTML = "";
         // Start a for loop to create giph diplay div's with onclick events to start and stop motion.
         var ticketMaster = [];
@@ -118,20 +118,19 @@ function getticketMasterData(artistName) {
         )
 
         console.log(ticketMaster);
-        document.getElementById("div3").innerHTML ="Upcoming Related Shows:<BR>";
-        
+        document.getElementById("div3").innerHTML = "<div class='divTitle'>Upcoming Events Related to " + artistName + "</div>";
         for (var e = 0; e < ticketMaster.length; e++) {
             // insert into html page (remove this for final use..)
 
-            var divInfo = `<h2 style="margin-bottom :0px">${ticketMaster[e].name}</h2>
-         <div class="eventDiv" style="background-color: beige; color:blue;" >
- <span><img src="${ticketMaster[e].image}" height ="50px;" alt="Cool picture dude!"></span>;
- <span style="vertical-align:top"> ${ticketMaster[e].eventDateFormatted}</span><br>
- <span style="vertical-align:top"> ${ticketMaster[e].eventInfo}</span><br>
- <span style="vertical-align:top">LOCATION: ${ticketMaster[e].eventVenue} Date= ${ticketMaster[e].eventDateFormatted}</span><br>
- <a href="${ticketMaster[e].buyTicketLink}">Buy Tickets on ticketMaster</a> 
-           </div>
- `
+            var divInfo = ` <div class="eventDiv">
+<div class='articleTitle'>${ticketMaster[e].name}</div>
+<div><img class="articlePhoto" src="${ticketMaster[e].image}" height ="50px;" alt="Ticket Master Photo"></div>;
+<div class="articleShortText" >  ${ticketMaster[e].eventDateFormatted}</div><br>
+<div class="articleLongText" >  ${ticketMaster[e].eventInfo}</div><br>
+<div class="articleShortText" > LOCATION: ${ticketMaster[e].eventVenue} Date= ${ticketMaster[e].eventDateFormatted}</div><br>
+<a class="articleLink" href="${ticketMaster[e].buyTicketLink}">Buy Tickets on ticketMaster</a> 
+</div>
+`
 
             document.getElementById("div3").innerHTML += divInfo;
         }
