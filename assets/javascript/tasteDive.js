@@ -44,8 +44,8 @@ function gettasteDiveData(search) {
 
             var divInfo = ` <div class="eventDiv">
             <div class="articleTitle">${results[i].Name}</div>
-            <div class="articleShortText">Type: ${results[i].Type}</div>
-            <div class="articleLongText">Info:  ${results[i].wTeaser}</div>
+            
+            <div class="articleLongText">${results[i].wTeaser}</div>
             </div> `
 
             document.getElementById("div1").innerHTML += divInfo;
