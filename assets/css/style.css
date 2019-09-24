@@ -93,7 +93,10 @@ input[type=text] {
       padding: 10px;
   }
 
-
+.articlePhoto {
+    max-height: 200px;
+    max-width: 200px;
+}
 
 
   
