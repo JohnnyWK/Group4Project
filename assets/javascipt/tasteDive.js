@@ -37,19 +37,18 @@ function gettasteDiveData(search) {
         $("#card").attr("style", "display: visible");
 
         // remove any html from div1:
-        document.getElementById("div1").innerHTML="You May Also Like:<br>"; 
+        document.getElementById("div1").innerHTML = "<div class='divTitle'>You May Also Like</div>";
         for (var i = 0; i < 6; i++) {
             var headerDiv = $("#card-header" + i);
             var cardP = $("#card-text" + i);
             var headerResultDiv = headerDiv;
             var cardResultDiv = cardP;
 
-
-            var divInfo= ` <h2 style="margin-bottom :0px">${results[i].Name}</h2>
-            <div class="eventDiv" style="background-color: beige; color:blue;" >
-            <span style="vertical-align:top">Type: ${results[i].Type}</span><br>
-            <span style="vertical-align:top">Info:  ${results[i].wTeaser}</span><br>
-            </div> `
+            var divInfo = ` <div class="eventDiv">
+<div class="articleTitle">${results[i].Name}</div>
+<div class="articleShortText">Type: ${results[i].Type}</div>
+<div class="articleLongText">Info:  ${results[i].wTeaser}</div>
+</div> `
 
             document.getElementById("div1").innerHTML += divInfo;
 
