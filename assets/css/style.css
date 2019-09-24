@@ -19,7 +19,7 @@ body {
     min-height: 100%;
     height: 100%;
     flex-direction: column;
-    background-image: url(../images/space.gif);
+    /* background-image: url(../images/space.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #81807F;
@@ -49,6 +49,13 @@ body {
     margin: auto;
 }
 
+#navbar-id {
+    background-image: url(../images/space.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70px;
+}
+
 .navText {
     opacity: .7; 
     color: white !important;
@@ -71,6 +78,7 @@ body {
     color: #40B84F;
     font-family: 'Righteous', cursive;
     font-size: 75px;
+    opacity: .8;
 }
 
 #tag-line {
@@ -106,10 +114,13 @@ body {
     font-family: 'Righteous', cursive;
 }
 
-.card-text {
-    font-family: 'Rubik', sans-serif;
+  .div-headers { 
+      color: black;
+      text-decoration: underline;
+      font-family: 'Fjalla One', sans-serif;
+      padding: 10px;
 
-}
+  }
 
 .card-img-top {
     border-radius: 50%;

@@ -1,5 +1,3 @@
-
-
 function gettasteDiveData(search) {
     var info = 1;
     var APIKey = "346441-Group4-QF40VRWM";
@@ -45,10 +43,10 @@ function gettasteDiveData(search) {
             var cardResultDiv = cardP;
 
             var divInfo = ` <div class="eventDiv">
-<div class="articleTitle">${results[i].Name}</div>
-<div class="articleShortText">Type: ${results[i].Type}</div>
-<div class="articleLongText">Info:  ${results[i].wTeaser}</div>
-</div> `
+            <div class="articleTitle">${results[i].Name}</div>
+            <div class="articleShortText">Type: ${results[i].Type}</div>
+            <div class="articleLongText">Info:  ${results[i].wTeaser}</div>
+            </div> `
 
             document.getElementById("div1").innerHTML += divInfo;
 
