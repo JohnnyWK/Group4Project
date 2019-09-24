@@ -29,6 +29,8 @@
     <script src="assets/javascript/ticketmaster.js"></script>
     <script src="assets/javascript/youTube.js"></script>
     <script src="assets/javascript/tasteDive.js"></script>
+    <script src="assets/javascript/newsApiOrg.js"></script>
+
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -125,6 +127,9 @@
                 <div class="col-lg-4" id="div3">
                   <h4 class="div-headers">Upcoming Peformances: </h4>
                 </div>
+                <div class="col-lg-4" id="div4">
+                    <h4 class="div-headers">In The News: </h4>
+                  </div>
             </div>
         </div>
 
@@ -143,6 +148,7 @@
                 getYouTubeData(search);
                 // adding function call for tasteDive
                 gettasteDiveData(search);
+                getData(search);
                 $("#main-content").css("display","block");
 
 
