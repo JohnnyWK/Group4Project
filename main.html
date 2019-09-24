@@ -21,39 +21,53 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/706740a01b.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/tastedive.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- These are our separate Javascript code files.. Wrote one for each of our functions  -->
-    <script src="assets/javascipt/ticketmaster.js"></script>
-    <script src="assets/javascipt/youTube.js"></script>
-    <script src="assets/javascipt/tasteDive.js"></script>
-    <script src="assets/javascipt/newsApiOrg.js"></script>
+
+    <script src="assets/javascript/ticketmaster.js"></script>
+    <script src="assets/javascript/youTube.js"></script>
+    <script src="assets/javascript/tasteDive.js"></script>
+    <script src="assets/javascript/newsApiOrg.js"></script>
+
     <link rel="stylesheet" href="assets/css/perrysTemporarySample.css">
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-expand-xs navbar-expand-sm navbar-expand-lg navbar-light bg-dark">
-        <div class="d-flex flex-grow-1">
-            <span class="d-block"></span>
-            <a class="navbar-brand navText d-lg-inline-block" href="#">
-                TasteTree <i class="fab fa-pagelines"></i>
-            </a>
-        </div>
-        <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
-            <ul class="navbar-nav ml-auto flex-nowrap">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand navText d-lg-inline-block" href="index.html">
+            TasteTree <i class="fab fa-pagelines"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNavDropdown" class="navbar-collapse collapse flex-row-reverse">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link navText" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link navText" href="main.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navText" href="#">About</a>
+                    <a class="nav-link navText" href="about.html">About</a>
                 </li>
             </ul>
         </div>
     </nav>
+    <br>
+    <div id="headertextdiv" style="text-align:center; display: visible">
+    <h1 id="taste-tree">
+    TasteTree<i class="fab fa-pagelines"></i>
+    </h1>
+    <h3 id="tag-line">
+    Branch Out
+    </h3>
+  </div>
+    
     <div class="text-center">
         <input id="user-input" type="text">
-        <input class="text-center" id="submitbtn" type="submit">
+        <!-- <input class="text-center" id="submitbtn" type="submit"> -->
+        <button type="submit" id = "submitbtn"><i class="far fa-play-circle"></i></button>
     </div>
+    <br>
     <div class="container">
         <div class="row">
 
@@ -110,11 +124,11 @@
                 </div> -->
 
 
-
-                <div class="col-lg-3" id="div1">You May Also Like:</div>
-                <div class="col-lg-3" id="div2">You Tube Videos:</div>
-                <div class="col-lg-3" id="div3">Upcoming Peformances</div>
-                <div class="col-lg-3" id="div4">In The News</div>
+                <div class="col-lg-4" id="div1"></div>
+                <div class="col-lg-4" id="div2"></div>
+                <div class="col-lg-4" id="div3"></div>
+                <div class="col-lg-3" id="div4"></div>
+      
 
             </div>
         </div>
@@ -125,9 +139,10 @@
 
         <script type="text/javascript">
 
-            $("#submitbtn").on("click", function () {
+            $("#submitbtn").on("click", function (event) {
 
-
+                event.preventDefault();
+                $("#headertextdiv").attr("style", "display: none");;
                 var search = $("#user-input").val();
                 //run functions to fill the DIV's ***********************************************************************
                 getticketMasterData(search);
@@ -194,6 +209,12 @@
 
                 // });
             })
+
+            $(document).bind('keypress', function(event) {
+                if(event.keyCode==13){
+                    $("#submitbtn").trigger('click');
+                }
+            });
 
 
         </script>
