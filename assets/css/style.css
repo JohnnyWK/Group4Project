@@ -99,7 +99,9 @@ input[type=text] {
 }
 
 
-  
+#main-content {
+      display: flex;
+  }
 
 
 
