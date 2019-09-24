@@ -24,9 +24,12 @@
     <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- These are our separate Javascript code files.. Wrote one for each of our functions  -->
+
     <script src="assets/javascript/ticketmaster.js"></script>
     <script src="assets/javascript/youTube.js"></script>
     <script src="assets/javascript/tasteDive.js"></script>
+    <script src="assets/javascript/newsApiOrg.js"></script>
+
     <link rel="stylesheet" href="assets/css/perrysTemporarySample.css">
 </head>
 
@@ -121,10 +124,12 @@
                 </div> -->
 
 
-
                 <div class="col-lg-4" id="div1"></div>
                 <div class="col-lg-4" id="div2"></div>
                 <div class="col-lg-4" id="div3"></div>
+                <div class="col-lg-3" id="div4"></div>
+      
+
             </div>
         </div>
 
@@ -144,6 +149,8 @@
                 getYouTubeData(search);
                 // adding function call for tasteDive
                 gettasteDiveData(search);
+                // added newsApi function call
+                getData(search);
 
 
 
