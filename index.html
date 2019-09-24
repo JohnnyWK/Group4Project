@@ -2,104 +2,209 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Taste Tree: Branch Out</title>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Group 4 Project!!</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Righteous|Satisfy|Vibes&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/706740a01b.js" crossorigin="anonymous"></script>
-  <!-- W3CSS -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
- 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Satisfy|Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/706740a01b.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/tastedive.css">
+
+    <!-- These are our separate Javascript code files.. Wrote one for each of our functions  -->
+    <script src="assets/javascipt/ticketmaster.js"></script>
+    <script src="assets/javascipt/youTube.js"></script>
+    <script src="assets/javascipt/tasteDive.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand navText navLogo" href="https://johnnywk.github.io/Group4Project/">
-      TasteTree <i class="fab fa-pagelines"></i>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link navText" href="https://johnnywk.github.io/Group4Project/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link navText" href="#">About</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-
-  <div class="main-container">
-    <h1 id="taste-tree">
-      TasteTree<i class="fab fa-pagelines"></i>
-    </h1>
-    <h3 id="tag-line">
-      Branch Out
-    </h3>
-    <form action="#" id="searchbar">
-      <input type="text" placeholder="Type an artist..." name="search">
-      <button type="submit" id = "submitbtn"><i class="far fa-play-circle"></i></button>
-    </form>
+    <nav class="navbar sticky-top navbar-expand-xs navbar-expand-sm navbar-expand-lg navbar-light" id="navbar-id">
+        <div class="d-flex flex-grow-1">
+            <span class="d-block"></span>
+            <a class="navbar-brand navText d-lg-inline-block" href="https://johnnywk.github.io/Group4Project/">
+              Sound <i class="far fa-eye"></i> Stalker</i>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="nav-link navText" href="https://johnnywk.github.io/Group4Project/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navText" href="https://johnnywk.github.io/Group4Project/about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="text-center">
+            <div class="col-md-12" id = "search-column">
+                <h1 id="title">Sound <i class="far fa-eye"></i> Stalker</h1>
+                <input id="user-input" type="text" placeholder="Type an artist...">
+                <button id="submitbtn" type="submit"><i class="far fa-play-circle"></i></button>
+            </div>
+        </div>
+        <div class="container" id="main-content" style="display: none">
+            <div class="row">
 
 
 
 
-    <div class="container" id="results-container" style="display:none">
-      <div class="centered">
+                <!--          <div class="col-lg-4">
+                <div id="card" style="display: none">
+                   
 
-        <section class="cards">
+                    <div id="results">hello!</div>
+                    <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">Hello!
+                        <div class="card-header" id="card-header0">Header</div>
+                        <div class="card-body">
+                            <p class="card-text" id="card-text0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                  </div>
+                    <div class=" card bg-light mb-3 float-left" style="max-width: 18rem;">
+                                <div class="card-header" id="card-header1">Header</div>
+                                <div class="card-body">
+                                    <p class="card-text" id="card-text1">Some quick example text to build on the card
+                                        title and make up the bulk of the card's content.</p>
+                                </div>
+                        </div>
+          <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                            <div class="card-header" id="card-header2">Header</div>
+                            <div class="card-body">
+                                <p class="card-text" id="card-text2">Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                            <div class="card-header" id="card-header3">Header</div>
+                            <div class="card-body">
+                                <p class="card-text" id="card-text3">Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                            <div class="card-header" id="card-header4">Header</div>
+                            <div class="card-body">
+                                <p class="card-text" id="card-text4">Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card bg-light mb-3 float-left" style="max-width: 18rem;">
+                            <div class="card-header" id="card-header5">Header</div>
+                            <div class="card-body">
+                                <p class="card-text" id="card-text5">Some quick example text to build on the card title
+                                    and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
 
-          <article class="card">
-            <p>content for card one</p>
-          </article><!-- /card-one -->
 
-          <article class="card">
-            <p>content for card two</p>
-          </article><!-- /card-two -->
 
-          <article class="card">
-            <p>content for card three</p>
-          </article><!-- /card-three -->
+                <div class="col-lg-4" id="div1">
+                 <h4 class="div-headers">You May Also Like: </h4>
+                </div>
+                <div class="col-lg-4" id="div2">
+                  <h4 class="div-headers">YouTube Videos: </h4>
+                </div>
+                <div class="col-lg-4" id="div3">
+                  <h4 class="div-headers">Upcoming Peformances: </h4>
+                </div>
+            </div>
+        </div>
 
-          <article class="card">
-            <p>content for card four</p>
-          </article><!-- /card-four -->
 
-        </section>
-      </div>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
-    </div>
+
+        <script type="text/javascript">
+
+            $("#submitbtn").on("click", function () {
+
+
+                var search = $("#user-input").val();
+                //run functions to fill the DIV's ***********************************************************************
+                getticketMasterData(search);
+                getYouTubeData(search);
+                // adding function call for tasteDive
+                gettasteDiveData(search);
+                $("#main-content").css("display","block");
+
+
+
+                // This was javascript I removed and put in tasteDive.js file..
+
+                // var info = 1;
+                // var APIKey = "346441-Group4-QF40VRWM";
+                // var queryURL = "https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=" + search + "&info=" + info + "&k=" + APIKey;
+
+                // $.ajax({
+                // url: queryURL,
+                // method: "GET"
+                // }).then(function(response) {
+                //     var resultDiv = $("#results")
+                //     var results = response.Similar.Results
+                //     // console.log(results);
+                //     console.log(search);
+                //     console.log(response);
+                //     resultDiv.empty();
+                //     resultDiv.append("<br><h2 class='text-center'>Search Results</h2><br>");
+                //     resultDiv.append("Name: " + response.Similar.Info[0].Name + "<br>");
+                //     resultDiv.append("Type: " + response.Similar.Info[0].Type + "<br>");
+                //     if (response.Similar.Info[0].wTeaser !== "") {
+                //         resultDiv.append("Info: " + "<p>" + response.Similar.Info[0].wTeaser + "</p>" + "<br>");
+                //     }
+                //     // resultDiv.append("Info: " + "<p>" + response.Similar.Info[0].wTeaser + "</p>" + "<br>");
+                //     if (response.Similar.Info[0].yID !== null) {
+                //         resultDiv.append("<iframe width='250' height='140' src='https://www.youtube.com/embed/" + response.Similar.Info[0].yID
+                //     + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'allowfullscreen></iframe><br><hr><br>");
+                //     }
+                //     // resultDiv.append("<iframe width='560' height='315' src='https://www.youtube.com/embed/" + response.Similar.Info[0].yID
+                //     // + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'allowfullscreen></iframe><br><hr><br>");
+                //     resultDiv.append("<h2 class='text-center'>Artists Related</h2><br>");
+                //     console.log("https://www.youtube.com/watch?v=" + response.Similar.Info[0].yID);
+
+
+
+                //     // for (var i = 0; i < results.length; i++) {
+                //     //     var infoDiv = $("<div>");
+                //     //     infoDiv.append("Name: " + results[i].Name + "<br>");
+                //     //     infoDiv.append("Type: " + results[i].Type + "<br><br>");
+                //     //     resultDiv.append(infoDiv);
+                //     // };
+                //     $("#card").attr("style", "display: visible");
+                //     for (var i = 0; i < 6; i++) {
+                //         var headerDiv = $("#card-header" + i);
+                //         var cardP = $("#card-text" + i);
+                //         var headerResultDiv = headerDiv;
+                //         var cardResultDiv = cardP;
+                //         headerDiv.text("Name: " + results[i].Name);
+                //         cardP.html("Type: " + results[i].Type);
+                //         cardP.append("<p>Info: " + results[i].wTeaser + "</p>");
+                //         // console.log("Card: " + results[i]);
+                //     };
+
+
+                // });
+            })
+
+
+        </script>
 </body>
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </html>

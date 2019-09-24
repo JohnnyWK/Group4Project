@@ -1,57 +1,69 @@
-html {
-    height: 100%;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: -10px;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
-    z-index: 100;
-    background-image: url(../images/space.gif);
-  }
-
 body {
     display: flex;
     min-height: 100%;
     height: 100%;
     flex-direction: column;
-    background-image: url(../images/space.gif);
+    /* background-image: url(../images/space.gif);
     background-repeat: no-repeat;
-    background-size: cover;
-    opacity: .7;
+    background-size: cover; */
+    background-color: black;
+    /* opacity: .7; */
+}
+
+#div1, #div2, #div3 {
+    background-color: white;
+    margin-top: 10%;
+    height: 500px;
+    overflow: auto;
+    margin-bottom: 15%;
+}
+
+#div1 {
+    background-color: #747480
+}
+
+#div2 {
+    background-color: #4F4F57;
+}
+
+#div3 {
+    background-color: #3A3A40;
 }
 
 .example {
     margin: auto;
 }
 
+#navbar-id {
+    background-image: url(../images/space.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70px;
+}
+
 .navText {
+    opacity: .7; 
     color: white !important;
     font-family: 'Righteous', cursive;
 
 }
 
 .navLogo {
+    opacity: .7; 
     margin-left: 3%;
 }
 
 #navbarNav {
+    opacity: .7; 
     margin-right: 3%;
     float: right;
 }
 
-#splash-page{
-    text-align: center;
-}
-
-#taste-tree{
-    color: #40B84F;
+#title{
+    color: white;
     font-family: 'Righteous', cursive;
     font-size: 75px;
+    opacity: .8;
 }
 
 #tag-line {
@@ -59,35 +71,26 @@ body {
     font-family: 'Satisfy', cursive;
 }
 
-#search {
-    text-align: center;
-    display: inline-block;
+#search-column {
+    margin-top: 15%;
 }
 
-.main-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20%;
-    text-align: center;
-}
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  
+  input[type=text]:focus {
+    width: 25%;
+  }
 
-#results {
-    padding: 10%;
-}
+  .div-headers { 
+      color: black;
+      text-decoration: underline;
+      font-family: 'Fjalla One', sans-serif;
+      padding: 10px;
 
-.card{
-    margin:30px;
-}
-.card-title {
-    font-family: 'Righteous', cursive;
-}
+  }
 
-.card-text {
-    font-family: 'Rubik', sans-serif;
-
-}
-
-.card-img-top {
-    border-radius: 50%;
-}
