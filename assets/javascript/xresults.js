@@ -8,6 +8,6 @@ $("#submitbtn").on("click", function(){
     url: queryURL,
     method: "GET"
     }).then(function(response) {
-       $(".artist-name").text("Related Artist; " + results[i])
+       
     })
 })
