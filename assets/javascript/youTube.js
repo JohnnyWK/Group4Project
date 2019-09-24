@@ -96,23 +96,23 @@ function getYouTubeData(artistName) {
             document.getElementById("div2").innerHTML += divInfo;
         };
 
-{
+
 //removed stuff
 //<a class="articleLink" href="${youTube[e].urlVideo}"> YouTube Video</a>  } // made the picture the link
 //<div class="articleShortText"> ${youTube[e].date}</div><br>
 //<div class="articleShortText"> ${youTube[e].dateFormatted}</div><br>
 //<div class="articleLongText"> ${youTube[e].info}</div><br>
 
-    }
+    
 
-    )
+
 
 
 
 
 }// end of function call
 
-
+    )}
 // // Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
 // document.getElementById("button").addEventListener("click", function () {
 //     var ItemToSearch = document.getElementById("searchArtist").value;
