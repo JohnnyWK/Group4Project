@@ -98,23 +98,18 @@ document.getElementById("div4").innerHTML += divInfo;
 }) // end of "tempData.then(function(data){"
 }) // end of   "fetch(url).then(function (response) {"
 
-
-
-
-
-
 }// end of "function getData(topic) {"
 
 
 
 
-//  Event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
-document.getElementById("button").addEventListener("click", function () {
-    var ItemToSearch = document.getElementById("searchArtist").value;
-   // alert("ItemToSearch = "+ItemToSearch)
+// //  Event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
+// document.getElementById("button").addEventListener("click", function () {
+//     var ItemToSearch = document.getElementById("searchArtist").value;
+//    // alert("ItemToSearch = "+ItemToSearch)
 
-    getData(ItemToSearch);
-}); 
+//     getData(ItemToSearch);
+// }); 
 
 
 //**********************************************  end ***************************************

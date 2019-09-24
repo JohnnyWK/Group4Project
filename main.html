@@ -27,6 +27,7 @@
     <script src="assets/javascipt/ticketmaster.js"></script>
     <script src="assets/javascipt/youTube.js"></script>
     <script src="assets/javascipt/tasteDive.js"></script>
+    <script src="assets/javascipt/newsApiOrg.js"></script>
     <link rel="stylesheet" href="assets/css/perrysTemporarySample.css">
 </head>
 
@@ -110,9 +111,11 @@
 
 
 
-                <div class="col-lg-4" id="div1">You May Also Like:</div>
-                <div class="col-lg-4" id="div2">You Tube Videos:</div>
-                <div class="col-lg-4" id="div3">Upcoming Peformances</div>
+                <div class="col-lg-3" id="div1">You May Also Like:</div>
+                <div class="col-lg-3" id="div2">You Tube Videos:</div>
+                <div class="col-lg-3" id="div3">Upcoming Peformances</div>
+                <div class="col-lg-3" id="div4">In The News</div>
+
             </div>
         </div>
 
@@ -131,6 +134,8 @@
                 getYouTubeData(search);
                 // adding function call for tasteDive
                 gettasteDiveData(search);
+                // added newsApi function call
+                getData(search);
 
 
 
