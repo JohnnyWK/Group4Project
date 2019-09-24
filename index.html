@@ -18,6 +18,8 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Righteous|Satisfy|Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/706740a01b.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
@@ -34,17 +36,17 @@
     <nav class="navbar sticky-top navbar-expand-xs navbar-expand-sm navbar-expand-lg navbar-light" id="navbar-id">
         <div class="d-flex flex-grow-1">
             <span class="d-block"></span>
-            <a class="navbar-brand navText d-lg-inline-block" href="#">
+            <a class="navbar-brand navText d-lg-inline-block" href="https://johnnywk.github.io/Group4Project/">
               Sound <i class="far fa-eye"></i> Stalker</i>
             </a>
         </div>
         <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
             <ul class="navbar-nav ml-auto flex-nowrap">
                 <li class="nav-item">
-                    <a class="nav-link navText" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link navText" href="https://johnnywk.github.io/Group4Project/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navText" href="#">About</a>
+                    <a class="nav-link navText" href="https://johnnywk.github.io/Group4Project/about.html">About</a>
                 </li>
             </ul>
         </div>
@@ -57,7 +59,7 @@
                 <button id="submitbtn" type="submit"><i class="far fa-play-circle"></i></button>
             </div>
         </div>
-        <div class="container" id="main-content">
+        <div class="container" id="main-content" style="display: none">
             <div class="row">
 
 
@@ -114,9 +116,15 @@
 
 
 
-                <div class="col-lg-4" id="div1">You May Also Like:</div>
-                <div class="col-lg-4" id="div2">You Tube Videos:</div>
-                <div class="col-lg-4" id="div3">Upcoming Peformances</div>
+                <div class="col-lg-4" id="div1">
+                 <h4 class="div-headers">You May Also Like: </h4>
+                </div>
+                <div class="col-lg-4" id="div2">
+                  <h4 class="div-headers">YouTube Videos: </h4>
+                </div>
+                <div class="col-lg-4" id="div3">
+                  <h4 class="div-headers">Upcoming Peformances: </h4>
+                </div>
             </div>
         </div>
 
@@ -135,6 +143,7 @@
                 getYouTubeData(search);
                 // adding function call for tasteDive
                 gettasteDiveData(search);
+                $("#main-content").css("display","block");
 
 
 

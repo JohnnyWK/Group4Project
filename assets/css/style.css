@@ -86,36 +86,11 @@ input[type=text] {
     width: 25%;
   }
 
+  .div-headers { 
+      color: black;
+      text-decoration: underline;
+      font-family: 'Fjalla One', sans-serif;
+      padding: 10px;
 
-/* #search {
-    text-align: center;
-    display: inline-block;
-} */
+  }
 
-/* .main-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20%;
-    text-align: center;
-} */
-
-/* #results {
-    padding: 10%;
-} */
-
-/* .card{
-    margin:30px;
-}
-.card-title {
-    font-family: 'Righteous', cursive;
-}
-
-.card-text {
-    font-family: 'Rubik', sans-serif;
-
-}
-
-.card-img-top {
-    border-radius: 50%;
-} */
