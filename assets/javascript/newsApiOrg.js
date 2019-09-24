@@ -13,176 +13,103 @@ function getData(topic) {
  var url = 'https://newsapi.org/v2/everything?q=' + topic + '&sortBy=popularity&apiKey=5dcec5d762154df793285080fa58a3dc'
       //var url="https://newsapi.org/v2/top-headlines?country=us&apiKey=5dcec5d762154df793285080fa58a3dc"
 
-fetch(url)
-
-    // fetch returns a "Promise" of data..
-.then(function (response) {
-      var tempData = response.json();
-
+fetch(url).then(function (fetchedData) {
+    // fetch returns a promise of "fetchedData"..
+var promisedData = fetchedData.json();
 // the following "then" will complete when the "Promise" is fulfilled.
-      tempData.then(function(data){
+      promisedData.then(function(response){
+            //---------------------OR The AJAX method--------------------
+            // $.ajax({ url: url,  method: "GET"  }).then(function (response) {  console.log(response); })
 
-        console.log("response", data);
+        console.log("response", response);
         //anything you need in here
       
-    })
-
-          
-
+// Start a for loop to create giph diplay div's with onclick events to start and stop motion.
+var newsApi = [];
 
 
- 
-            //---------------------OR--------------------
-            // $.ajax({
-            //     url: url,
-            //     method: "GET"
-            // }).then(function (response) {
-            //     console.log(response);
-            // })
+for (var i = 0; i < response.articles.length; i++) {
+   // set all newsApi fields to at least blank..   
+newsApi[i] = {};
+newsApi[i].title = "";
+newsApi[i].date="";
+newsApi[i].dateFormatted="";
+newsApi[i].photoLink = "";
+newsApi[i].source="";
+newsApi[i].description="";
+newsApi[i].content="";
+newsApi[i].articleLink="";
 
+// Now to set all the newsAPI fields..
+// First, shorten+ simplify the link with a variable:
+incoming=response.articles[i];
+output=newsApi[i];
 
+// now for each field, check to make sure it exists, and if so, copy it to the proper output field
+if (incoming.title) {output.title = incoming.title;}
+if (incoming.content) {output.content = incoming.content;}
+if (incoming.description) {output.description = incoming.description;}
+if (incoming.url) {output.articleLink = incoming.url;}
+if (incoming.urlToImage) {output.photoLink = incoming.urlToImage;}
 
+// check to see if .source has a field named .name.. if so, get the source name..
+if (incoming.source){
+    if (incoming.source.name){output.source = incoming.source.name;}
+}
 
-
-
-            })
-
-
-
-            // document.getElementById("eventsHere").innerHTML +=JSON.stringify( response.json());
-
-            //     queryURL = "https://app.ticketMaster.com/discovery/v2/events?apikey=mTEygy6LqzguOiGcxe4nsIaFBEQTdwN3&keyword=" + artistName + "&preferredCountry=us"
-            //     var response = [];
-            //     response.length = 0;
-            //     $.ajax({
-            //         url: queryURL,
-            //         method: "GET"
-            //     }).then(function (response) {
-            //  if(response){console.log(response);}else{alert("No Response from ticketmaster..");}
-            //         document.getElementById("eventsHere").innerHTML = "";
-            //         // Start a for loop to create giph diplay div's with onclick events to start and stop motion.
-            //         var ticketMaster = [];
-
-            //         for (var i = 0; i < response._embedded.events.length; i++) {
-            //             // set all ticketMaster fields to at least blank..            
-            //             ticketMaster[i] = {};
-            //             ticketMaster[i].name = "";
-            //             ticketMaster[i].eventDate;
-            //             ticketMaster[i].eventDateFormatted = "";
-            //             ticketMaster[i].eventInfo = "";
-            //             ticketMaster[i].eventVenue = "";
-            //             ticketMaster[i].image = "";
-            //             ticketMaster[i].buyTicketLink = "";
-
-            //             var event = response._embedded.events[i];
-
-            //             if (event.name) { ticketMaster[i].name = event.name; }
-
-
-            //             if (event.images[1].url) { ticketMaster[i].image = event.images[1].url; }
+if (incoming.publishedAt) {
+output.date = incoming.publishedAt;
+// compute formatted date
+var tempDate = new Date(incoming.publishedAt.substr(0,10) + "GMT -0600");
+var tempDateString = tempDate.toString();
+var tempDateFormatted = tempDateString.substr(0, 15);
+output.dateFormatted=tempDateFormatted;
+}
 
 
 
-
-            //             if (event.dates || event.dates.start || event.dates.start.localDate) { ticketMaster[i].eventDate = event.dates.start.localDate; }
-
-
-            //             var tempDate = new Date(event.dates.start.localDate + "GMT -0600");
-            //             var tempDateString = tempDate.toString();
-            //             var tempDateFormatted = tempDateString.substr(0, 15);
-
-            //             if (event.dates || event.dates.start || event.dates.start.localDate) { ticketMaster[i].eventDateFormatted = tempDateFormatted; }
+} // end of "for (var i = 0; i < response._embedded.events.length; i++) {"
+console.log("newsApi array",newsApi);
 
 
 
+// Now put the data on the page:
+document.getElementById("div4").innerHTML = "<div class='divTitle'>In The News</div>";
+for (var e = 0; e < newsApi.length; e++) {
+// insert into html page (remove this for final use..)
 
-            //             if (event.info) { ticketMaster[i].eventInfo = event.info; } else { ticketMaster[i].eventInfo = ""; }
-
-            //             ticketMaster[i].eventVenue = "";
-
-
-            //             // the event venue caused a lot of random errors because some events didn't have states, or cities etc.. So I have to put in checks 
-            //             // to make sure the property exists, and then check to see if the field exists before trying to add it to ticketMaster property!
-
-
-            //             // does the event have an _embedded property?
-            //             if (event._embedded) {
-
-            //                 //Does that property have a venue[0]?
-            //                 if (event._embedded.venues[0]) {
-
-            //                     //set eventVenue to the venues[0] property for ease of use
-            //                     eventVenue = event._embedded.venues[0];
-
-            //                     // does this venue have a name field? is so, add it to the ticketMaster array
-            //                     if (eventVenue.name) { ticketMaster[i].eventVenue = eventVenue.name; }
-
-            //                     // does this venue have a city property?
-            //                     if (eventVenue.city) {
-            //                         // does this city property have a name field? is so, add it to the ticketMaster array
-            //                         if (eventVenue.city.name) { ticketMaster[i].eventVenue += " in " + eventVenue.city.name; }
-            //                     }
-
-            //                     // does this venue have a state property?
-            //                     if (eventVenue.state) {
-
-            //                         // does this state property have a name field? is so, add it to the ticketMaster array
-            //                         if (eventVenue.state.name) { ticketMaster[i].eventVenue += " " + eventVenue.state.name; }
-            //                     }
-
-            //                     // does this venue have a country property?
-            //                     if (eventVenue.country) {
-
-            //                         // does this country property have a name field? is so, add it to the ticketMaster array
-            //                         if (eventVenue.country.name) { ticketMaster[i].eventVenue += " " + eventVenue.country.name; }
-            //                     }
-            //                 }
+var divInfo = ` <div class="eventDiv">
+<div class='articleTitle'>${newsApi[e].title}</div>
+<div><img class="articlePhoto" src="${newsApi[e].photoLink}" alt="Ticket Master Photo"></div>
+<div class="articleShortText" >  ${newsApi[e].dateFormatted}</div>
+<div class="articleLongText" >  ${newsApi[e].description}</div>
+<a class="articleLink" href="${newsApi[e].articleLink}">Link to Article</a>
+<div class="articleLongText">Source: ${newsApi[e].source}</div>
+</div>
+`
+// newsApi[i].content="";
+document.getElementById("div4").innerHTML += divInfo;
+} // end of forloop to put articles onto page
 
 
-            //                 if (event.url) { ticketMaster[i].buyTicketLink = event.url; }
-            //             }
-            //         }
-            //         console.log(ticketMaster);
-
-            //         // to sort by event date
-
-            //         ticketMaster.sort((a, b) => {
-            //             if (a.eventDate > b.eventDate) { return 1 } else { return -1 }
-            //         }
-            //         )
-
-            //         console.log(ticketMaster);
-
-            //         for (var e = 0; e < ticketMaster.length; e++) {
-            //             // insert into html page (remove this for final use..)
-
-            //             var divInfo = `<h2 style="margin-bottom :0px">${ticketMaster[e].name}</h2>
-            //          <div class="eventDiv" style="background-color: beige; color:blue;" >
-            //  <span><img src="${ticketMaster[e].image}" height ="50px;" alt="Cool picture dude!"></span>;
-            //  <span style="vertical-align:top"> ${ticketMaster[e].eventDateFormatted}</span><br>
-            //  <span style="vertical-align:top"> ${ticketMaster[e].eventInfo}</span><br>
-            //  <span style="vertical-align:top">LOCATION: ${ticketMaster[e].eventVenue} Date= ${ticketMaster[e].eventDateFormatted}</span><br>
-            //  <a href="${ticketMaster[e].buyTicketLink}">Buy Tickets on ticketMaster</a> 
-            //            </div>
-            //  `
-
-            //             document.getElementById("eventsHere").innerHTML += divInfo;
-            //         }
 
 
-            //     });
 
-        }// end of function call
+}) // end of "tempData.then(function(data){"
+}) // end of   "fetch(url).then(function (response) {"
 
-
-//Add event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
- document.getElementById("button").addEventListener("click", function () {
-     var ItemToSearch = document.getElementById("searchArtist").value;
-    // alert("ItemToSearch = "+ItemToSearch)
-
-     getData(ItemToSearch);
- });
+}// end of "function getData(topic) {"
 
 
-// uncomment out the following line to open to Metallica
-//getData("Metallica");
+
+
+// //  Event listener to react when user enters new topic.. Creates button and automatically pull related updated Gif's.
+// document.getElementById("button").addEventListener("click", function () {
+//     var ItemToSearch = document.getElementById("searchArtist").value;
+//    // alert("ItemToSearch = "+ItemToSearch)
+
+//     getData(ItemToSearch);
+// }); 
+
+
+//**********************************************  end ***************************************
