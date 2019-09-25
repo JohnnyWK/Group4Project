@@ -42,8 +42,9 @@ function gettasteDiveData(search) {
             var headerResultDiv = headerDiv;
             var cardResultDiv = cardP;
 
+
             var divInfo = ` <div class="eventDiv">
-            <div class="articleTitle">${results[i].Name}</div>
+            <div class="articleTitle" id="tastediverelated"><span style="cursor:pointer">${results[i].Name}</span></div>
             
             <div class="articleLongText">${results[i].wTeaser}</div>
             </div> `
@@ -67,4 +68,15 @@ function gettasteDiveData(search) {
         }
     }
     )
+
 }
+
+$(document).on("click", "#tastediverelated.articleTitle", function(e){
+    console.log($(this).text());
+    var tdsearch = $(this).text();
+    $("#user-input").val(tdsearch);
+    getticketMasterData(tdsearch);
+    getYouTubeData(tdsearch);
+    gettasteDiveData(tdsearch);
+    getData(tdsearch);
+});
