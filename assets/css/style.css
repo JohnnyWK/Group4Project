@@ -66,8 +66,10 @@ body {
 }
 
 #navbar-id {
-    background-image: url(assets/images/space.gif)
+    /* background-image: url(assets/images/space.gif) */
     height: 70px;
+    box-shadow: 0px 0px 40px black;
+    background-color: black;
 }
 
 .navText {
