@@ -118,13 +118,13 @@ function getticketMasterData(artistName) {
         )
 
         console.log(ticketMaster);
-        document.getElementById("div3").innerHTML = "<div class='divTitle'>Upcoming Events Related to " + artistName + "</div>";
+        document.getElementById("div3").innerHTML = "<div class='divTitle'>Upcoming Events Related to: " + artistName + "</div>";
         for (var e = 0; e < ticketMaster.length; e++) {
             // insert into html page (remove this for final use..)
 
             var divInfo = ` <div class="eventDiv">
 <div class='articleTitle'>${ticketMaster[e].name}</div>
-<div><img class="articlePhoto" src="${ticketMaster[e].image}" height ="50px;" alt="Ticket Master Photo"></div>;
+<div><img class="articlePhoto" src="${ticketMaster[e].image}" height ="50px;" alt="Ticket Master Photo"></div>
 <div class="articleShortText" >  ${ticketMaster[e].eventDateFormatted}</div><br>
 <div class="articleLongText" >  ${ticketMaster[e].eventInfo}</div><br>
 <div class="articleShortText" > LOCATION: ${ticketMaster[e].eventVenue} Date= ${ticketMaster[e].eventDateFormatted}</div><br>
