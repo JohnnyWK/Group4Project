@@ -87,11 +87,11 @@ function getYouTubeData(artistName) {
         document.getElementById("div2").innerHTML = "<div class='divTitle'>YouTube Videos Related to: " + artistName + "</div>";
         for (var e = 0; e < youTube.length; e++) {
             var divInfo = ` <div class="eventDiv">
-<div class="articleTitle">${youTube[e].title}</div>
-<a class="articleLink" href="${youTube[e].urlVideo}"> 
-<div class="articlePhoto"><img src="${youTube[e].urlThumbnail}" alt="Article Photo"></div>
-</a> 
-</div> `
+            <div class="articleTitle">${youTube[e].title}</div>
+            <a class="articleLink" target="_blank" href="${youTube[e].urlVideo}"> 
+            <div class="articlePhoto"><img src="${youTube[e].urlThumbnail}" alt="Article Photo"></div>
+            </a> 
+            </div> `
             // stick this data into html test page:
             document.getElementById("div2").innerHTML += divInfo;
         };
