@@ -15,9 +15,9 @@ function getYouTubeData(artistName) {
 
     // Performing our AJAX GET request
     // perrys api key:
-     queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + artistName + "&videoEmbeddable=true&type=video&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
+    // queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + artistName + "&videoEmbeddable=true&type=video&key=AIzaSyBquInAOt9guGiS3K47FM44oH9Mn6eYnaY"
     // daniels api key:
-    //queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + artistName + "&videoEmbeddable=true&type=video&key=AIzaSyCyZbwUI-oq91OAEz_ZT80p7api9cQqQsU"
+    queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + artistName + "&videoEmbeddable=true&type=video&key=AIzaSyCyZbwUI-oq91OAEz_ZT80p7api9cQqQsU"
     var response = [];
     var youTube = [];
     response.length = 0;
