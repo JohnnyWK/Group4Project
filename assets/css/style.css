@@ -47,8 +47,10 @@ body {
 }
 
 #navbar-id {
-    background-image: url(assets/images/space.gif)
+    /* background-image: url(assets/images/space.gif) */
     height: 70px;
+    box-shadow: 0px 0px 50px black;
+    background-color: black;
 }
 
 .navText {
@@ -74,6 +76,7 @@ body {
     font-family: 'Righteous', cursive;
     font-size: 75px;
     opacity: .8;
+    text-decoration: underline;
 }
 
 #tag-line {
