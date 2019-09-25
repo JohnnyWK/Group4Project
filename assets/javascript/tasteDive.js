@@ -44,7 +44,7 @@ function gettasteDiveData(search) {
 
 
             var divInfo = ` <div class="eventDiv">
-            <div class="articleTitle" id="tastediverelated">${results[i].Name}</div>
+            <div class="articleTitle" id="tastediverelated"><span style="cursor:pointer">${results[i].Name}</span></div>
             
             <div class="articleLongText">${results[i].wTeaser}</div>
             </div> `
