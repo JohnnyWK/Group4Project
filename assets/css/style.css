@@ -47,7 +47,7 @@ body {
 }
 
 #navbar-id {
-    background-image: url(assets/images/space.gif);
+    background-image: url(assets/images/space.gif)
     height: 70px;
 }
 
@@ -178,7 +178,16 @@ input[type=text]:focus {
     font-size: 17px;
     }    
 
-
+    #transparency{
+        background-image: url(../images/space.gif);
+        background-size: 100%;
+        height: 100%;
+        width:100%;
+        opacity: .2;
+     position: fixed;
+     bottom: 0px;
+     left:0px;
+      }
 
 
 
