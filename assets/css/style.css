@@ -213,10 +213,7 @@ input[type=text]:focus {
 
 
 
-
-
-
-
+ 
 
 
 
@@ -232,7 +229,7 @@ input[type=text]:focus {
   .glitch {
     color: white;
     font-size: 150px;
-    text-transform: upercase;
+    /* text-transform: uppercase; */
     position: relative;
     display: inline-block;
   }
@@ -590,3 +587,41 @@ input[type=text]:focus {
     }
   }
   
+    /* MOBILE RESPONSIVE    */
+    @media only screen and (max-width: 560px) {
+
+        
+
+      #div1 {
+        max-width: 100%;
+        float: left;
+        height: 200px;
+        margin-bottom: 5%;
+      }
+
+      #div2 {
+        max-width: 100%;
+        float: left;
+        height: 200px;
+        margin-bottom: 5%;
+      }
+
+      #div3 {
+        max-width: 100%;
+        float: left;
+        height: 200px;
+        margin-bottom: 5%;
+      }
+
+      #div4 {
+        max-width: 100%;
+        float: left;
+        height: 200px;
+        margin-bottom: 5%;
+      }
+
+      .glitch {
+        font-size: 50px !important;
+      }
+
+  }
