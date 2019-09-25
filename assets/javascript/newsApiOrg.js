@@ -83,7 +83,7 @@ var divInfo = ` <div class="eventDiv">
 <div><img class="articlePhoto" src="${newsApi[e].photoLink}" alt="Ticket Master Photo"></div>
 <div class="articleShortText" >  ${newsApi[e].dateFormatted}</div>
 <div class="articleLongText" >  ${newsApi[e].description}</div>
-<a class="articleLink" href="${newsApi[e].articleLink}">Link to Article</a>
+<a class="articleLink" target="_blank" href="${newsApi[e].articleLink}">Link to Article</a>
 <div class="articleLongText">Source: ${newsApi[e].source}</div>
 </div>
 `
