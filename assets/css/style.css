@@ -233,6 +233,9 @@ input[type=text]:focus {
 
   .about-bio {
     color: white;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
   }
 
   .about-img {
