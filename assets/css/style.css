@@ -191,7 +191,7 @@ input[type=text]:focus {
         scrollbar-width: none;
     }
     
-    .articleLongText::-webkit-scrollbar { 
+.articleLongText::-webkit-scrollbar { 
       display: none; 
     }
     
@@ -211,8 +211,41 @@ input[type=text]:focus {
      left:0px;
       }
 
+  
+#about-header {
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+  margin-top: 5%;
+}
 
 
+  .about-container {
+    text-align: center;
+  }
+
+  .about-name {
+    color: dodgerblue;
+  }
+
+  .about-bio {
+    color: white;
+  }
+
+  .about-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  #perry-about-img {
+    height: 300px;
+    width: 250px;
+  }
+
+  #johnny-about-img {
+    height: 270px;
+    width: 200px;
+  }
  
 
 
@@ -585,6 +618,12 @@ input[type=text]:focus {
     100% {
       clip: rect(31px, 9999px, 136px, 0);
     }
+  }
+
+  .about-glitch {
+    font-size: 50px !important;
+    color: #008f11;
+    font-family: 'Righteous', cursive;
   }
   
     /* MOBILE RESPONSIVE    */
