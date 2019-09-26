@@ -1,7 +1,6 @@
-# Taste Tree
+# Sound Stalker
 
-TASTE TREE
-"Branch Out"
+SOUND STALKER
 
 Created by Group 4 - Perry Williams, Daniel Chiu, Dayne Beronque, and Johnny Kreitzman.
 Front End Team - Dayne Beronque and Johnny Kreitzman
