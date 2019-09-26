@@ -1,57 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Taste Tree: Branch Out</title>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Righteous|Satisfy|Vibes&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/706740a01b.js" crossorigin="anonymous"></script>
-  <!-- W3CSS -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Group 4 Project!!</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+  
+  
+  
+      <link rel="stylesheet" href="assets/css/reset.css">
+  
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Satisfy|Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Monoton|Russo+One|Staatliches&display=swap" rel="stylesheet">
+  
+  
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/706740a01b.js" crossorigin="anonymous"></script>
+    
+  
+  
+    <!-- These are our separate Javascript code files.. Wrote one for each of our functions  -->
+    <script src="assets/javascript/ticketmaster.js"></script>
+    <script src="assets/javascript/youTube.js"></script>
+    <script src="assets/javascript/tasteDive.js"></script>
+    <script src="assets/javascript/newsApiOrg.js"></script>
+   <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
 
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand navText navLogo" href="https://johnnywk.github.io/Group4Project/">
-      TasteTree <i class="fab fa-pagelines"></i>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link navText" href="https://johnnywk.github.io/Group4Project/">Home</a>
+  <nav class="navbar sticky-top navbar-expand-xs navbar-expand-sm navbar-expand-lg navbar-light" id="navbar-id">
+    <div class="d-flex flex-grow-1">
+      <span class="d-block"></span>
+      <a class="navbar-brand navText d-lg-inline-block" href="https://johnnywk.github.io/Group4Project/">
+        Sound <i class="far fa-eye"></i> Stalker</i>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1" id="navbarNav">
+      <ul class="navbar-nav ml-auto flex-nowrap">
+        <li class="nav-item">
+          <a class="nav-link navText" href="https://johnnywk.github.io/Group4Project/">Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navText" href="#">About <span class="sr-only">(current)</span></a>
+          <a class="nav-link navText" href="https://johnnywk.github.io/Group4Project/about.html">About <span
+            class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
   </nav>
+
+  <h1 id="about-header">MEET THE SOUND STALKER DEVELOPMENT TEAM</h1>
+  <div class="container about-container">
+    <div class="col-md-12">
+      <h3 class="about-name"><span class="glitch about-glitch" data-text="Dnaiel Chiu">Daniel Chiu</span></h3>
+      <img src="assets/images/daniel_chiu.jpg" alt="Daniel Chiu" class="about-img">
+      <p class="about-bio">
+        Daniel started out as an accountant, a great accountant at that, but a normal guy nonetheless.  One day while
+        working hard at his accounting firm, he felt a quick, sharp pain on his neck.  Little did he know he was bitten by
+        a spider with radioactive spider blood.  Immediately upon realizing what happened, he jumped at the closest wall
+        to climb it.  Once he woke up from knocking himself out, he realized the radioactive spider blood didn't give him special
+        spider powers, but it left him with an insatiable hunger to program.  That's where his coding journey began, and this is 
+        his first of many coding projects to come.
+      </p>
+    </div>
+    <div class="col-md-12">
+      <h3 class="about-name"><span class="glitch about-glitch" data-text="Dayne Beronque">Dayne Beronque</span></h3>
+      <img src="assets/images/dayne.png" alt="Dayne Beronque" class="about-img">
+      <p class="about-bio">
+        Dayne comes to us from a planet in a galaxy far, far away, sent to Earth by his parents moments before his home planet's
+        destruction.  Dayne safely landed on earth by crashing into the Geocities headquarters.  It was there they raised him, and
+        when he was old enough to see their websites, he was disgusted.  On his home planet, they have beautiful, flowing, interactive
+        websites that were useful, functional, and very pleasing to the eye.  He could not believe earthlings would stand for such 
+        attrocious websites, and it became his life mission to learn Planet Earth's different coding languages, so that he could save us
+        all from garbage websites and applications.
+      </p>
+    </div>
+    <div class="col-md-12">
+        <h3 class="about-name"><span class="glitch about-glitch" data-text="Perry Williams">Perry Williams</span></h3>
+      <img src="assets/images/perry.jpg" alt="Perry Williams" id="perry-about-img">
+      <p class="about-bio">
+        The year is 2029.  Skynet headquarters, despite being the leader in advanced robotics and artificial intelligence, is riddled
+        with broken appliances.  Enter Perry Williams, the fearless leader of a team of extraordinary appliance repairmen.
+        After accidentally taking a wrong turn into what he thought was the men's room, Perry found himself in the middle om an
+        operating table, surrounded by a room full of mad Skynet scientists.  It wasn't long before he was under the knife, being equipped with a NeuralNet Processor,
+        a learning computer, capable of learning every programming language known to modern man.  Skynet sent their
+        new cyborg, the P800, waaaaaay back in time...10 years to be exact, to the year 2019.
+      </p>
+    </div>
+    <div class="col-md-12">
+      <h3 class="about-name"><span class="glitch about-glitch" data-text="Johnny Kreitzman">Johnny Kreitzman</span></h3>
+      <p class="about-bio">
+        Johnny was almost killed in a terrible automobile accident many years ago.  In fact, he did die, but was brought back to life
+        using cutting-edge technology from some of the world's most renown scientists and surgeons.  They aimed to build him faster,
+        stronger, more intellgent, a superhuman the likes of which the world has not yet seen.  They failed.  They did, however,
+        give him a great head of hair, and a strong desire to learn programming and web development.
+      </p>
+    </div>
+  </div>
