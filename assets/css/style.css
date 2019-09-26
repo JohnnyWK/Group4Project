@@ -220,6 +220,8 @@ input[type=text]:focus {
   font-weight: bolder;
   color: white;
   margin-top: 5%;
+  font-family: 'Farro', sans-serif;
+
 }
 
 
@@ -230,6 +232,25 @@ input[type=text]:focus {
   .about-name {
     color: dodgerblue;
   }
+
+#about-name-daniel {
+  color: #46E8C4;
+}  
+
+#about-name-dayne {
+  color: #E8AE46;
+}  
+
+
+#about-name-perry {
+  color: #C2FF59;
+}  
+
+
+#about-name-johnny {
+  color: #FF4D4D;
+}  
+
 
   .about-bio {
     color: white;
@@ -242,6 +263,7 @@ input[type=text]:focus {
     width: 200px;
     height: 200px;
   }
+
 
   #perry-about-img {
     height: 300px;
